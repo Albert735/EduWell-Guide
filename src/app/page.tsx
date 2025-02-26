@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Navbar from "@/components/ui/Navbar";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="home">
       <Navbar />
-      <h1>Home</h1>
+      <Hero />
     </div>
   );
 }
