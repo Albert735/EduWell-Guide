@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Rubik } from "next/font/google"; // ✅ Import correct fonts
 import "./globals.css";
+//import themeprovider
+import { ThemeProvider } from "next-themes";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,9 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    //suppress hydration warning
+    <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.variable} ${rubik.variable} antialiased`}>
-        {children}
+        {/* Enable system theme */}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

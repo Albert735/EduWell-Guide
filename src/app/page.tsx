@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
@@ -11,7 +11,7 @@ import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="home bg-white dark:bg-black dark:text-white">
       <Navbar />
       <Hero />
       <Benefits />
