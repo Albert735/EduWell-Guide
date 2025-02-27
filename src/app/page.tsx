@@ -5,6 +5,7 @@ import Benefits from "@/components/Benefits";
 import Features from "@/components/Features";
 import Global from "@/components/Global";
 import Team from "@/components/Team";
+import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Global />
       <Features />
       <Team />
+      <Testimonial />
     </div>
   );
 }
