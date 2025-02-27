@@ -1,6 +1,9 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "./ui/button";
+import { IoTimeOutline } from "react-icons/io5";
+import { IoPeopleOutline } from "react-icons/io5";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
 
 function Features() {
   return (
@@ -14,6 +17,7 @@ function Features() {
 
       <div className="flex justify-between items-center gap-10 w-full">
         <div className="flex flex-col gap-4 ustify-center items-center text-center">
+          <IoTimeOutline size={50} />
           <h2>
             Easily Schedule Sessions with <br /> Qualified Professionals for
             Support
@@ -29,7 +33,10 @@ function Features() {
             </Button>
           </span>
         </div>
+
         <div className="flex flex-col gap-4 ustify-center items-center text-center">
+          <IoPeopleOutline size={50} />
+
           <h2>
             Engage in Free Discussions and <br /> Find Peer Support Anytime
           </h2>
@@ -43,7 +50,9 @@ function Features() {
             </Button>
           </span>
         </div>
+
         <div className="flex flex-col gap-4 justify-center items-center text-center">
+          <HiOutlineAcademicCap size={50} />
           <h2>
             Access Comprehensive Resources <br /> for Your Academic and Career
             <br /> Growth
