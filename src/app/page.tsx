@@ -11,7 +11,7 @@ import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
-    <div className="home bg-white dark:bg-black dark:text-white">
+    <div className="home bg-white dark:bg-black dark:text-white transition-all duration-200">
       <Navbar />
       <Hero />
       <Benefits />
