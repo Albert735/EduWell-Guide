@@ -30,10 +30,8 @@ function Hero() {
         <Image
           src="/assets/four-happy-students-near-university-campus.jpg"
           alt="Hero Image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="hover:scale-110 transition-all ease-in-out delay-150 duration-150"
+          fill
+          className="hover:scale-110 transition-all ease-in-out duration-300"
           priority
         />
       </div>

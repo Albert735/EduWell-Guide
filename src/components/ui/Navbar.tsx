@@ -5,7 +5,9 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 function Navbar() {
   return (
     <div className="navbar flex justify-between  items-center max-w-screen-xl mx-auto p-4">
-      <div>EduWell Guide</div>
+      <div>
+        <h1>EduWell Guide</h1>
+      </div>
       <div className="flex items-center">
         <ul className="flex gap-7">
           <li>Find Counsellors</li>
