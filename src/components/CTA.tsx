@@ -5,7 +5,7 @@ import Image from "next/image";
 function CTA() {
   return (
     <div className="cta flex justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem] ">
-      <div className="flex gap-[4rem] border  rounded-2xl">
+      <div className="flex flex-col md:flex-row gap-[4rem] border  rounded-2xl">
         <div className="flex flex-col gap-4 justify-center items-start px-6">
           <h1 className="text-[2rem] font-bold">
             Join EduWell for Expert <br /> Guidance.
@@ -20,6 +20,7 @@ function CTA() {
             <Button variant={"outline"}>Explore</Button>
           </span>
         </div>
+
         <div>
           <Image
             src="/assets/people-library-reading-books.jpg"

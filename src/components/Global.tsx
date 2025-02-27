@@ -9,8 +9,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 function Benefits() {
   return (
     <div className=" flex  justify-center  items-center max-w-screen-xl mx-auto p-4 py-[5rem] gap-10 ">
-      <div className="flex justify-between gap-5 w-full">
-        <div className="flex flex-col gap-5 w-[40rem]">
+      <div className="flex flex-col xl:flex-row justify-between gap-5 w-full">
+        <div className="flex flex-col gap-5 xl:w-[40rem]">
           <span className="flex items-center gap-2">
             <h3 className=" font-normal">Tagline</h3>{" "}
             <HiOutlineArrowDownRight />
@@ -19,7 +19,7 @@ function Benefits() {
             <h1 className="text-[2rem] font-bold">
               Medium length section heading goes here
             </h1>
-            <p className="text-sm dark:text-gray-400 w-[30rem]">
+            <p className="text-sm dark:text-gray-400 xl:w-[30rem]">
               EduWell Guide offers a comprehensive suite of features tailored to
               meet the diverse needs of university students. From finding expert
               counselors to engaging in community discussions, we empower

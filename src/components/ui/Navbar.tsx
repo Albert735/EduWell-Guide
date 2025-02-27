@@ -10,7 +10,7 @@ function Navbar() {
       <div>
         <h1 className="text-2xl">EduWell Guide</h1>
       </div>
-      <div className="flex items-center">
+      <div className="hidden md:flex items-center">
         <ul className="flex gap-7">
           <li>Find Counsellors</li>
           <li>Resources Center</li>

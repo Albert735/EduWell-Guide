@@ -16,7 +16,7 @@ function Hero() {
       </div>
 
       <div className="flex flex-col items-center gap-5">
-        <p className="text-center w-[40rem] text-[1rem] leading-relaxed text-gray-500">
+        <p className="text-center xl:w-[40rem] text-[1rem] leading-relaxed text-gray-500">
           EduWell Guide connects university students with qualified counselors
           for academic, mental health, and career support. Experience a
           community-driven platform designed to foster growth and well-being.
@@ -65,7 +65,7 @@ function Hero() {
             priority
           />
         </div>
-        <div className="w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
+        <div className="hidden xl:flex w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
           <Image
             src="/assets/young-student-learning-library.jpg"
             alt="Hero Image"

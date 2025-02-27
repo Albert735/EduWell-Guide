@@ -9,13 +9,13 @@ function Features() {
   return (
     <div className=" flex flex-col  justify-center text-white  items-start max-w-screen-xl mx-auto p-4 gap-[5rem]  py-[10rem] bg-[url(/assets/blob-scene-haikei.png)] bg-cover bg-center bg-no-repeat rounded-xl">
       <div className=" text-center w-full">
-        <h1 className="text-[2rem] font-bold">
+        <h1 className="xl:text-[2rem] text-[1.5rem] font-bold">
           Discover Expert Counselors Tailored to <br />
           Your Academic and Personal Needs
         </h1>
       </div>
 
-      <div className="flex justify-between items-center gap-10 w-full">
+      <div className="flex xl:flex-row flex-col justify-between items-center gap-10 w-full">
         <div className="flex flex-col gap-4 ustify-center items-center text-center">
           <IoTimeOutline size={50} />
           <h2>

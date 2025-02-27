@@ -6,8 +6,8 @@ import { HiOutlineArrowDownRight } from "react-icons/hi2";
 
 function Benefits() {
   return (
-    <div className=" flex  justify-between items-start max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
-      <div className="w-[35rem] h-[21rem] relative overflow-hidden rounded-2xl">
+    <div className=" flex flex-col xl:flex-row  justify-between items-start max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
+      <div className="w-full  xl:w-[35rem] h-[21rem] relative overflow-hidden rounded-2xl">
         <Image
           src="/assets/people-meeting-support-group.jpg"
           alt="Hero Image"
@@ -19,7 +19,7 @@ function Benefits() {
         />
       </div>
 
-      <div className="flex flex-col gap-5 w-[40rem]">
+      <div className="flex flex-col gap-5 xl:w-[40rem]">
         <span className="flex items-center gap-2">
           <h3 className=" font-normal">Empower</h3>
           <HiOutlineArrowDownRight />
@@ -35,7 +35,7 @@ function Benefits() {
           </p>
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex flex-col xl:flex-row gap-10">
           <span className="flex flex-col gap-3">
             <h2>Expert Counselors</h2>
             <p className="text-sm text-gray-500">

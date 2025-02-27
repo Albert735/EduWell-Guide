@@ -10,7 +10,7 @@ function Team() {
       <h1 className="text-[2rem] font-bold">Our Team</h1>
 
       <div className="flex flex-col  justify-center gap-[5rem]">
-        <span className="flex gap-10">
+        <span className="flex flex-col xl:flex-row gap-10">
           <div className="flex flex-col gap-10 justify-center  items-center border p-4 rounded-2xl w-[20rem]">
             <Image
               src="/assets/black-nurse-man-getting-ready-work.jpg"
@@ -90,7 +90,7 @@ function Team() {
           </div>
         </span>
 
-        <span className="flex gap-10">
+        <span className="hidden md:flex gap-10">
           <div className="flex flex-col gap-10 justify-center  items-center border p-4 rounded-2xl w-[20rem]">
             <Image
               src="/assets/modern-man-beige-suit.jpg"
