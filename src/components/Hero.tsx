@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 function Hero() {
   return (
-    <div className="hero flex flex-col justify-center items-center max-width-screen-xl mx-auto p-4 gap-10  py-[5rem]">
+    <div className="hero flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
       <div>
         <h1 className="text-[3rem] font-bold text-center">
           Empowering Students with <br /> Expert Guidance
@@ -27,14 +27,51 @@ function Hero() {
         </span>
       </div>
 
-      <div className="w-[55rem] h-[32.5rem] relative overflow-hidden rounded-2xl">
-        <Image
-          src="/assets/four-happy-students-near-university-campus.jpg"
-          alt="Hero Image"
-          fill
-          className="hover:scale-110 transition-all ease-in-out duration-300"
-          priority
-        />
+      <div className="flex justify-between gap-5 w-full">
+        <div className="w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
+          <Image
+            src="/assets/african-american-woman-beige-suit-portrait.jpg"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            priority
+          />
+        </div>
+        <div className="w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
+          <Image
+            src="/assets/vertical-shot-happy-young-woman-with-curly-hair-holds-notepad-pen-makes-notes-what-she-observes-around-city-dressed-casual-green-jumper-poses-outdoors-against-blurred-background.jpg"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            priority
+          />
+        </div>
+        <div className="w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
+          <Image
+            src="/assets/young-student-working-assignment.jpg"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            priority
+          />
+        </div>
+        <div className="w-[15rem] h-[22.5rem] relative overflow-hidden rounded-2xl">
+          <Image
+            src="/assets/young-student-learning-library.jpg"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="hover:scale-110 transition-all ease-in-out duration-300"
+            priority
+          />
+        </div>
       </div>
     </div>
   );
