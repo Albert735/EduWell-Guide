@@ -1,4 +1,6 @@
 import React from "react";
+// import Button from "./button";
+import { Button } from "./button";
 
 function Footer() {
   return (
@@ -9,7 +11,7 @@ function Footer() {
           <ul className="flex gap-4 text-sm text-gray-400">
             <li>Get Started</li>
             <li>Contact Us</li>
-            <li>FAQ's</li>
+            <li>FAQ</li>
             <li>Community</li>
             <li>Blog</li>
             <li>Support Center</li>
@@ -22,11 +24,10 @@ function Footer() {
             <input
               type="text"
               placeholder="Enter your email"
-              className="border px-4 py-2  w-[20rem] outline-none"
+              className="border px-4 py-2  w-[20rem] outline-none rounded-lg"
             />
-            <button className="bg-black px-6 py-2 text-white rounded-full">
-              Subscribe
-            </button>
+            {/* <Button variant={"default"}>Subscribe</Button> */}
+            <Button variant={"default"}>Subscribe</Button>
           </span>
           <p className="text-[12px] text-gray-400">
             By subscribing you agree to with our Privacy Policy

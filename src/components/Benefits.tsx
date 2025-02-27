@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { Button } from "./ui/button";
 
 function Benefits() {
   return (
@@ -50,12 +51,12 @@ function Benefits() {
         </div>
 
         <span className="flex justify-start gap-7">
-          <button className="btn border  bg-black text-white px-6 py-2 rounded-full">
-            Get Started
-          </button>
+          <Button variant={"default"}>Get Started</Button>
           <span className="flex items-center gap-2">
-            <button>Sign Up</button>
-            <ChevronRightIcon className="w-5 h-5 text-gray-600" />
+            <Button variant={"outline"}>
+              Sign Up
+              <ChevronRightIcon className="w-5 h-5 " />
+            </Button>
           </span>
         </span>
       </div>

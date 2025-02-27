@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "./ui/button";
+import Image from "next/image";
 
 function CTA() {
   return (
@@ -14,14 +16,12 @@ function CTA() {
             needs and challenges.
           </p>
           <span className="flex gap-4">
-            <button className="bg-black rounded-full text-white px-6 py-2">
-              Sign Up
-            </button>
-            <button className="border px-6 py-2 rounded-full">Explore</button>
+            <Button variant={"default"}>Sign Up</Button>
+            <Button variant={"outline"}>Explore</Button>
           </span>
         </div>
         <div>
-          <img
+          <Image
             src="/assets/people-library-reading-books.jpg"
             alt="CTA"
             className="rounded-xl"

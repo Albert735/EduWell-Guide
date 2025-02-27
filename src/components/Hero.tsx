@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 function Hero() {
   return (
@@ -17,12 +18,12 @@ function Hero() {
           community-driven platform designed to foster growth and well-being.
         </p>
         <span className="flex justify-center gap-7">
-          <button className="btn border  bg-black text-white px-6 py-2 rounded-full">
+          <Button variant={"default"} className="">
             Get Started
-          </button>
-          <button className="btn border border-black   px-6 py-2 rounded-full">
+          </Button>
+          <Button variant={"outline"} className="">
             Learn More
-          </button>
+          </Button>
         </span>
       </div>
 

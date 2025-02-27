@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { Button } from "./ui/button";
 
 function Features() {
   return (
@@ -11,7 +12,7 @@ function Features() {
         </h1>
       </div>
 
-      <div className="flex justify-center items-center gap-10 ">
+      <div className="flex justify-between items-center gap-10 w-full">
         <div className="flex flex-col gap-4 ustify-center items-center text-center">
           <h2>
             Easily Schedule Sessions with <br /> Qualified Professionals for
@@ -21,9 +22,11 @@ function Features() {
             Connect with counselors who specialize in various <br /> areas to
             get the help you need.
           </p>
-          <span className="flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full w-[8rem]">
-            <button>Browse</button>
-            <ChevronRightIcon className="w-5 h-5 text-white" />
+          <span className="flex items-center ">
+            <Button variant={"default"}>
+              Browse
+              <ChevronRightIcon className="w-5 h-5" />
+            </Button>
           </span>
         </div>
         <div className="flex flex-col gap-4 ustify-center items-center text-center">
@@ -34,9 +37,10 @@ function Features() {
             Join our community forum to share experiences and <br /> seek advice
             from fellow students..
           </p>
-          <span className="flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full w-[7rem]">
-            <button>Join</button>
-            <ChevronRightIcon className="w-5 h-5 text-white" />
+          <span className="flex items-center">
+            <Button variant={"default"}>
+              Join <ChevronRightIcon className="w-5 h-5" />
+            </Button>
           </span>
         </div>
         <div className="flex flex-col gap-4 justify-center items-center text-center">
@@ -48,9 +52,11 @@ function Features() {
             Utilize our platform to explore valuable materials that <br />{" "}
             enhance your learning journey.
           </p>
-          <span className="flex items-center justify-center gap-2 bg-black text-white px-6 py-2 rounded-full w-[7rem]">
-            <button>Learn</button>
-            <ChevronRightIcon className="w-5 h-5 text-white" />
+          <span className="flex items-center justify-center ">
+            <Button variant={"default"}>
+              Learn
+              <ChevronRightIcon className="w-5 h-5" />
+            </Button>
           </span>
         </div>
       </div>

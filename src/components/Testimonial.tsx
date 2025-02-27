@@ -23,7 +23,7 @@ function Testimonial() {
           </div>
           <span>
             <p className="text-[1rem] font-semibold">
-              "The support I received was invaluable during finals."
+              The support I received was invaluable during finals.
             </p>
           </span>
           <div className="flex gap-2">
@@ -57,9 +57,9 @@ function Testimonial() {
           </div>
           <span>
             <p className="text-[1rem] font-semibold">
-              "Connecting with a counselor made all the difference in my journey{" "}
+              Connecting with a counselor made all the difference in my journey
               <br />
-              toward personal growth and emotional well-being!"
+              toward personal growth and emotional well-being!
             </p>
           </span>
           <div className="flex gap-2">

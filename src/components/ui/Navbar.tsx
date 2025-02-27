@@ -2,6 +2,7 @@ import React from "react";
 // import Image from "next/image";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import ToggleTheme from "@/components/Toggle-theme";
+import { Button } from "./button";
 
 function Navbar() {
   return (
@@ -23,9 +24,7 @@ function Navbar() {
 
       <div className="flex items-center gap-7">
         <ToggleTheme />
-        <button className="btn border border-black px-6 py-1 rounded-full">
-          Join
-        </button>
+        <Button variant={"default"}>Join</Button>
       </div>
     </div>
   );
