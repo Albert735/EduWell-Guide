@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 function Benefits() {
   return (
-    <div className=" flex  justify-center  items-center max-w-screen-xl mx-auto p-4 py-[5rem] gap-10">
+    <div className=" flex  justify-center  items-center max-w-screen-xl mx-auto p-4 py-[5rem] gap-10 ">
       <div className="flex justify-between gap-5 w-full">
         <div className="flex flex-col gap-5 w-[40rem]">
           <span className="flex items-center gap-2">

@@ -7,7 +7,7 @@ import { HiOutlineAcademicCap } from "react-icons/hi2";
 
 function Features() {
   return (
-    <div className=" flex flex-col  justify-center  items-start max-w-screen-xl mx-auto p-4 gap-[5rem]  py-[10rem]">
+    <div className=" flex flex-col  justify-center text-white  items-start max-w-screen-xl mx-auto p-4 gap-[5rem]  py-[10rem] bg-[url(/assets/blob-scene-haikei.png)] bg-cover bg-center bg-no-repeat rounded-xl">
       <div className=" text-center w-full">
         <h1 className="text-[2rem] font-bold">
           Discover Expert Counselors Tailored to <br />

@@ -1,13 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
+// import "../styles/globals.css";
 
 function Hero() {
   return (
-    <div className="hero flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
+    <div className="hero flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem] ">
       <div>
-        <h1 className="text-[3rem] font-bold text-center">
-          Empowering Students with <br /> Expert Guidance
+        <h1 className="text-[2.5rem] text-center">
+          Empowering Students with <br />
+          <span className="bg-gradient-to-r from-[#3674B5] to-[#B2A5FF] bg-clip-text text-5xl font-extrabold text-transparent">
+            Expert Guidance
+          </span>
         </h1>
       </div>
 
