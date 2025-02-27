@@ -17,7 +17,7 @@ function Features() {
             Easily Schedule Sessions with <br /> Qualified Professionals for
             Support
           </h2>
-          <p>
+          <p className="text-sm text-gray-500">
             Connect with counselors who specialize in various <br /> areas to
             get the help you need.
           </p>
@@ -30,7 +30,7 @@ function Features() {
           <h2>
             Engage in Free Discussions and <br /> Find Peer Support Anytime
           </h2>
-          <p>
+          <p className="text-sm text-gray-500">
             Join our community forum to share experiences and <br /> seek advice
             from fellow students..
           </p>
@@ -44,7 +44,7 @@ function Features() {
             Access Comprehensive Resources <br /> for Your Academic and Career
             <br /> Growth
           </h2>
-          <p>
+          <p className="text-sm text-gray-500">
             Utilize our platform to explore valuable materials that <br />{" "}
             enhance your learning journey.
           </p>

@@ -11,7 +11,7 @@ function Hero() {
       </div>
 
       <div className="flex flex-col items-center gap-5">
-        <p className="text-center w-[40rem] text-[1rem] leading-relaxed text-neutral-600">
+        <p className="text-center w-[40rem] text-[1rem] leading-relaxed text-gray-500">
           EduWell Guide connects university students with qualified counselors
           for academic, mental health, and career support. Experience a
           community-driven platform designed to foster growth and well-being.
