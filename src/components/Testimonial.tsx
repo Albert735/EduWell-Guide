@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 function Testimonial() {
   return (
-    <div className="team flex flex-col justify-center items-center max-width-screen-xl mx-auto p-4 gap-10  py-[5rem]">
+    <div className="team flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
       <div className="flex flex-col  justify-center items-center">
         <h1 className="text-[1.5rem] font-bold"> Student Testimonial</h1>
         <p className="text-sm text-gray-400">

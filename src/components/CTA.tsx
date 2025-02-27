@@ -2,7 +2,7 @@ import React from "react";
 
 function CTA() {
   return (
-    <div className="cta flex justify-center items-center max-width-screen-xl mx-auto p-4 gap-10  py-[5rem] ">
+    <div className="cta flex justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem] ">
       <div className="flex gap-[4rem] border  rounded-2xl">
         <div className="flex flex-col gap-4 justify-center items-start px-6">
           <h1 className="text-[2rem] font-bold">

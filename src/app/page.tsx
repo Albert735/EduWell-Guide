@@ -7,6 +7,7 @@ import Global from "@/components/Global";
 import Team from "@/components/Team";
 import Testimonial from "@/components/Testimonial";
 import CTA from "@/components/CTA";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Team />
       <Testimonial />
       <CTA />
+      <Footer />
     </div>
   );
 }

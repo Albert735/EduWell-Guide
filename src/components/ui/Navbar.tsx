@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="navbar flex justify-between  items-center max-w-screen-xl mx-auto p-4">
       <div>
-        <h1>EduWell Guide</h1>
+        <h1 className="text-2xl">EduWell Guide</h1>
       </div>
       <div className="flex items-center">
         <ul className="flex gap-7">
