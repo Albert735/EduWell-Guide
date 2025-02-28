@@ -80,7 +80,10 @@ function Navbar() {
 
       <div className="flex items-center gap-7">
         <ToggleTheme />
-        <Button variant={"default"}>Join</Button>
+
+        <Link href="/join">
+          <Button variant="default">Join</Button>
+        </Link>
       </div>
     </div>
   );
