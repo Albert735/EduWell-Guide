@@ -3,6 +3,8 @@ import { Montserrat, Rubik } from "next/font/google"; // ✅ Import correct font
 import "./globals.css";
 //import themeprovider
 import { ThemeProvider } from "next-themes";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -32,7 +34,9 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${rubik.variable} antialiased`}>
         {/* Enable system theme */}
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
