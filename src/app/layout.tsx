@@ -34,9 +34,11 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${rubik.variable} antialiased`}>
         {/* Enable system theme */}
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="dark:bg-black dark:text-white transition-all duration-200">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
