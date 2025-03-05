@@ -3,8 +3,9 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
-import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
+import { FaFacebook, FaApple } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type Inputs = {
   email: string;
@@ -50,7 +51,7 @@ export default function LoginPage() {
               type="email"
               placeholder="Enter your email"
               {...register("email", { required: "Email is required" })}
-              className="p-2 border border-gray-300 rounded-md w-[20rem]"
+              className="p-2 border border-gray-300 rounded-md w-[20rem] bg-transparent"
             />
             {errors.email && (
               <span className="text-red-500 text-sm">
@@ -71,7 +72,7 @@ export default function LoginPage() {
               {...register("passwordRequired", {
                 required: "Password is required",
               })}
-              className="p-2 border border-gray-300 rounded-md w-[20rem]"
+              className="p-2 border border-gray-300 rounded-md w-[20rem] bg-transparent"
             />
             {errors.passwordRequired && (
               <span className="text-red-500 text-sm">
@@ -101,7 +102,7 @@ export default function LoginPage() {
           <span className="flex text-sm text-gray-400 gap-3">
             Don&apos;t have an account?
             <Link href="/register">
-              <span className="text-primary text-blue-500">Sign up</span>
+              <span className="text-blue-500">Sign up</span>
             </Link>
           </span>
 
@@ -110,7 +111,12 @@ export default function LoginPage() {
               variant={"outline"}
               className="flex items-center gap-2 w-[20rem]"
             >
-              <FaGoogle />
+              <Image
+                src="/icons/icons8-google-480.png"
+                alt="Google"
+                width={20}
+                height={20}
+              />
               Sign in with Google
             </Button>
             <Button className="flex items-center gap-2 w-[20rem] bg-[#1877F2] hover:bg-blue-500 text-white">
