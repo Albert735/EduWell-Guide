@@ -37,7 +37,7 @@ export default function RegisterPage() {
       <div className="flex flex-col items-center justify-center gap-8 w-[25rem]">
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-2xl font-bold">Create your account</h1>
-          <p className="text-gray-400">Lets get started</p>
+          <span className="text-gray-400">Lets get started</span>
           <Button variant="outline" className="gap-2 w-[20rem]">
             <Image
               src="/icons/icons8-google-480.png"
@@ -75,9 +75,11 @@ export default function RegisterPage() {
               <SelectValue placeholder="--select tile--" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="light">Student</SelectItem>
-              <SelectItem value="dark">Lecturer</SelectItem>
-              <SelectItem value="system">Counsellor</SelectItem>
+              <SelectItem value="student">Student</SelectItem>
+              <SelectItem value="lecturer">Lecturer</SelectItem>
+              <SelectItem value="counsellor">Counsellor</SelectItem>
+              <SelectItem value="doctor">Doctor</SelectItem>
+              <SelectItem value="therapist">Therapist</SelectItem>
             </SelectContent>
           </Select>
 
@@ -127,7 +129,7 @@ export default function RegisterPage() {
         </form>
 
         <div className="flex f gap-2">
-          <p>Already have an account?</p>
+          <span>Already have an account?</span>
           <Link href="/login">
             <span className="text-blue-500 cursor-pointer">Log in</span>
           </Link>
