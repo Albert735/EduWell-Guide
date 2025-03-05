@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 // import "../styles/globals.css";
 
 function Hero() {
@@ -22,9 +23,12 @@ function Hero() {
           community-driven platform designed to foster growth and well-being.
         </p>
         <span className="flex justify-center gap-7">
-          <Button variant={"default"} className="">
-            Get Started
-          </Button>
+          <Link href="/join">
+            <Button variant={"default"} className="">
+              Get Started
+            </Button>
+          </Link>
+
           <Button variant={"outline"} className="">
             Learn More
           </Button>

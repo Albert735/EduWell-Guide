@@ -39,7 +39,7 @@ const positions = [
 ];
 export default function ArcImages() {
   return (
-    <div className="relative w-full h-[30rem] justify-center items-center flex ">
+    <div className="relative w-screen md:w-screen xl:w-full h-[30rem] justify-center items-center flex ">
       {images.map((image, index) => (
         <motion.div
           key={index}
@@ -54,7 +54,7 @@ export default function ArcImages() {
             alt={image.alt}
             width={200}
             height={200}
-            className="rounded-xl shadow-lg"
+            className="rounded-xl shadow-lg "
           />
         </motion.div>
       ))}
