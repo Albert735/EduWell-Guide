@@ -11,7 +11,7 @@ function CTA() {
             Join EduWell for Expert <br /> Guidance.
           </h1>
           <p className="text-sm text-gray-400 leading-loose">
-            Sign up for free and connect with counselors who understand your{" "}
+            Sign up for free and connect with counselors who understand your
             <br />
             needs and challenges.
           </p>
@@ -26,7 +26,7 @@ function CTA() {
             src="/assets/people-library-reading-books.jpg"
             alt="CTA"
             className="rounded-xl"
-            height={4500}
+            height={450}
             width={450}
           />
         </div>
