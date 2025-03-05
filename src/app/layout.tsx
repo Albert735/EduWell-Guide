@@ -33,7 +33,7 @@ export default function RootLayout({
   const pathname = usePathname() || "";
 
   // Hide layout for specific pages
-  const hideLayoutRoutes = ["/join"];
+  const hideLayoutRoutes = ["/join", "/login"];
   const hideLayout = hideLayoutRoutes.includes(pathname);
 
   return (

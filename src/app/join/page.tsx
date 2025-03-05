@@ -1,4 +1,6 @@
-// import { Button } from "@/components/ui/button";
+"use client";
+
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 // import Image from "next/image";
 import ArcImages from "@/components/ArcImages";
@@ -11,6 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+// import Link from "next/link";
 
 export default function JoinPage() {
   return (
@@ -22,7 +25,7 @@ export default function JoinPage() {
         <ToggleTheme />
       </div>
 
-      <div className="relative flex flex-col items-center justify-center  w-full h-full">
+      <div className="relative flex flex-col items-center justify-center  w-full h-full gap-5">
         <ArcImages />
         <div className="flex flex-col items-center justify-center space-y-4">
           <h2 className="text-2xl font-bold">Join Our Community of Students</h2>
@@ -31,22 +34,39 @@ export default function JoinPage() {
             navigate the EduWell platform.Meet students and become part of our
             thriving community.
           </p>
+        </div>
+
+        <div>
           <Dialog>
             <DialogTrigger className="bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 rounded-md text-sm">
               Join Now
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="gap-8">
               <DialogHeader>
-                <DialogTitle>Are you absolutely sure?</DialogTitle>
+                <DialogTitle className="text-center">Join Now!</DialogTitle>
                 <DialogDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
+                  <span className="flex flex-col gap-4">
+                    <span className="text-center">
+                      Sign up for free and connect with counselors.
+                    </span>
+                    <span className="flex  w-full justify-center items-center gap-4 ">
+                      <Link href="/signup">
+                        <Button className="h-9 px-4 py-2">Sign Up</Button>
+                      </Link>
+
+                      <Link href="/login">
+                        <Button variant={"outline"} className="h-9 px-4 py-2">
+                          Log In
+                        </Button>
+                      </Link>
+                    </span>
+                    {/* <span className="w-full border" /> */}
+                  </span>
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
           </Dialog>
         </div>
-        {/* <ArcImages /> */}
       </div>
     </div>
   );
