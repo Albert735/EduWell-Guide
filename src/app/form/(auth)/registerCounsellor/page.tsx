@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import Back from "@/components/ui/Back";
 
 type Inputs = {
   email: string;
@@ -34,6 +35,7 @@ export default function RegisterPage() {
 
   return (
     <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen">
+      <Back />
       <div className="flex flex-col items-center justify-center gap-8 w-[25rem]">
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-2xl font-bold">Create your account</h1>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaFacebook, FaApple } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Back from "@/components/ui/Back";
 
 type Inputs = {
   email: string;
@@ -26,6 +27,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen">
+      <Back />
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="flex flex-col justify-center items-center p-4 w-[25rem] gap-6">
           <span className="flex flex-col items-center gap-2">
