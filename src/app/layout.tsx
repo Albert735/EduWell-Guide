@@ -40,6 +40,8 @@ export default function RootLayout({
     "/form/registerCounsellor",
     "/form/login",
     "/form",
+    "/dashboard/student",
+    "/dashboard/counsellor",
   ];
   const hideLayout = hideLayoutRoutes.includes(pathname);
 

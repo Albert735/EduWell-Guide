@@ -127,7 +127,11 @@ export default function RegisterPage() {
             </span>
           </span>
 
-          <Button type="submit">Sign Up</Button>
+          <Link href="/dashboard/counsellor">
+            <Button type="submit" className="w-full">
+              Sign Up
+            </Button>
+          </Link>
         </form>
 
         <div className="flex f gap-2">
