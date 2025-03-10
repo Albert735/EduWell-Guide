@@ -28,7 +28,7 @@ export default function RegisterPage() {
   const password = watch("password");
 
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen">
+    <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-start h-[100vh]">
       <Back />
       <div className="flex flex-col items-center justify-center gap-8 w-[25rem]">
         <div className="flex flex-col items-center justify-center gap-6">
@@ -128,9 +128,9 @@ export default function RegisterPage() {
           <Button type="submit">Sign Up</Button>
         </form>
 
-        <div className="flex f gap-2">
+        <div className="flex py-10 gap-2">
           <span>Already have an account?</span>
-          <Link href="/login">
+          <Link href="/form/login">
             <span className="text-blue-500 cursor-pointer">Log in</span>
           </Link>
         </div>

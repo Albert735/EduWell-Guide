@@ -26,7 +26,7 @@ export default function LoginPage() {
   console.log(watch("email"));
 
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen">
+    <div className="flex flex-col max-w-screen-xl mx-auto items-center justify-start h-screen">
       <Back />
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="flex flex-col justify-center items-center p-4 w-[25rem] gap-6">
@@ -53,7 +53,7 @@ export default function LoginPage() {
               type="email"
               placeholder="Enter your email"
               {...register("email", { required: "Email is required" })}
-              className="p-2 border border-gray-300 rounded-md w-[20rem] bg-transparent"
+              className="p-2 border border-white/15 rounded-md w-[20rem] bg-transparent"
             />
             {errors.email && (
               <span className="text-red-500 text-sm">
@@ -74,7 +74,7 @@ export default function LoginPage() {
               {...register("passwordRequired", {
                 required: "Password is required",
               })}
-              className="p-2 border border-gray-300 rounded-md w-[20rem] bg-transparent"
+              className="p-2 border border-white/15 rounded-md w-[20rem] bg-transparent"
             />
             {errors.passwordRequired && (
               <span className="text-red-500 text-sm">
@@ -103,7 +103,7 @@ export default function LoginPage() {
         <div className="flex flex-col items-center gap-6">
           <span className="flex text-sm text-gray-400 gap-3">
             Don&apos;t have an account?
-            <Link href="/register">
+            <Link href="/form">
               <span className="text-blue-500">Sign up</span>
             </Link>
           </span>
