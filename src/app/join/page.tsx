@@ -50,11 +50,11 @@ export default function JoinPage() {
                       Sign up for free and connect with counselors.
                     </span>
                     <span className="flex  w-full justify-center items-center gap-4 ">
-                      <Link href="/register">
+                      <Link href="/form">
                         <Button className="h-9 px-4 py-2">Sign Up</Button>
                       </Link>
 
-                      <Link href="/login">
+                      <Link href="/form/login">
                         <Button variant={"outline"} className="h-9 px-4 py-2">
                           Log In
                         </Button>

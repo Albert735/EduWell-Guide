@@ -5,19 +5,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Link from "next/link";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 
 type Inputs = {
   email: string;
   password: string;
   confirmPassword: string;
+  phoneNumber: number;
 };
 
 export default function RegisterPage() {
@@ -70,18 +64,22 @@ export default function RegisterPage() {
             )}
           </span>
 
-          <Select>
-            <SelectTrigger className="w-full h-11">
-              <SelectValue placeholder="--select tile--" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="student">Student</SelectItem>
-              <SelectItem value="lecturer">Lecturer</SelectItem>
-              <SelectItem value="counsellor">Counsellor</SelectItem>
-              <SelectItem value="doctor">Doctor</SelectItem>
-              <SelectItem value="therapist">Therapist</SelectItem>
-            </SelectContent>
-          </Select>
+          <span className="flex flex-col gap-2">
+            <label htmlFor="phoneNumber">Phone Number</label>
+            <input
+              type="phoneNumber"
+              id="phoneNumber"
+              {...register("phoneNumber", {
+                required: "phoneNumber is required",
+              })}
+              className="p-2 border dark:border-white/15 rounded-md bg-transparent"
+            />
+            {errors.phoneNumber && (
+              <span className="text-red-500 text-sm">
+                {errors.phoneNumber.message}
+              </span>
+            )}
+          </span>
 
           <span className="flex flex-col gap-2">
             <label htmlFor="password">Password</label>
