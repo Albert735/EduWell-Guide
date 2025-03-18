@@ -35,29 +35,34 @@ export default function Sidebar() {
           </span>
 
           <span className="flex flex-col gap-2">
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
-              <RxDashboard size={20} />
-              <span>Dashboard</span>
-            </span>
+            <Link href="/dashboard/counsellor">
+              <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
+                <RxDashboard size={20} />
+                <span>Dashboard</span>
+              </span>
+            </Link>
 
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
-              <LuCalendarDays size={20} />
-              <span>Appointments</span>
-            </span>
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
+            <Link href="/dashboard/counsellor/appointment">
+              <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
+                <LuCalendarDays size={20} />
+                <span>Appointments</span>
+              </span>
+            </Link>
+
+            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
               <PiUsers size={20} />
               <span>Clients</span>
             </span>
 
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
+            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
               <AiOutlineMessage size={20} />
               <span>Messages</span>
             </span>
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
+            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
               <FaRegStar size={20} />
               <span>Reviews</span>
             </span>
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100">
+            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
               <GrCreditCard size={20} />
               <span>Payments</span>
             </span>

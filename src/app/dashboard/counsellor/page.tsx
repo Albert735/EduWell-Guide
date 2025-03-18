@@ -1,7 +1,7 @@
 export default function CounsellorDashboard() {
   return (
     <div>
-      <h1>Counsellor Dashboard</h1>
+      <h1>Counsellor Dashboard whooooooo</h1>
     </div>
   );
 }

@@ -42,6 +42,7 @@ export default function RootLayout({
     "/form",
     "/dashboard/student",
     "/dashboard/counsellor",
+    "/dashboard/counsellor/appointment",
   ];
   const hideLayout = hideLayoutRoutes.includes(pathname);
 
