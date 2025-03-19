@@ -70,6 +70,30 @@ const demoClients = [
     progress: 100,
     status: "Completed",
   },
+  {
+    id: 7,
+    email: "albertqauye735@gmail.com",
+    Visits: 5,
+    phone: "024-675-8089",
+    progress: 24,
+    status: "Completed",
+  },
+  {
+    id: 8,
+    email: "0ghermano675@gmail.com",
+    Visits: 8,
+    phone: "055-125-8689",
+    progress: 100,
+    status: "Completed",
+  },
+  {
+    id: 9,
+    email: "geraldfreck98@gmail.com",
+    Visits: 7,
+    phone: "055-125-8689",
+    progress: 78,
+    status: "in progress",
+  },
 ];
 
 export default function Clients() {

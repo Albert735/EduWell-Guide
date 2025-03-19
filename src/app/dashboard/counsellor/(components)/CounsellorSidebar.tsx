@@ -79,14 +79,22 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/messages">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-between items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/messages"
                     ? "bg-white/10"
                     : ""
                 }`}
               >
-                <AiOutlineMessage size={20} />
-                <span>Messages</span>
+                <span className="flex gap-2 items-center">
+                  <AiOutlineMessage size={20} />
+                  <span>Messages</span>
+                </span>
+
+                <span className="relative w-5 h-5 bg-white rounded-md">
+                  <span className="text-sm text-black absolute left-1.5 ">
+                    0
+                  </span>
+                </span>
               </span>
             </Link>
 
