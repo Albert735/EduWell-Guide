@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-
 import { RxDashboard } from "react-icons/rx";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiUsers } from "react-icons/pi";
@@ -13,10 +12,16 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 import { GrCreditCard } from "react-icons/gr";
 import { IoSettingsOutline } from "react-icons/io5";
+// import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
   const [settingsToggle, setSettingsTogle] = useState(false);
+  const pathname = usePathname();
+
+  if (!pathname) return null; // Early return to prevent issues with undefined pathname.
+  console.log(pathname);
 
   const handleClick = () => {
     setSettingsTogle(!settingsToggle);
@@ -24,7 +29,7 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div className="flex flex-col justify-between h-full px-4 py-4 bg-white/5 border-r">
+      <div className="hidden lg:flex flex-col justify-between h-full px-4 py-4 bg-white/5 border-r">
         <span className="flex flex-col gap-[2rem]">
           <span className="flex justify-between items-center">
             <span>
@@ -36,45 +41,93 @@ export default function Sidebar() {
 
           <span className="flex flex-col gap-2">
             <Link href="/dashboard/counsellor">
-              <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor" ? "bg-white/10" : ""
+                }`}
+              >
                 <RxDashboard size={20} />
                 <span>Dashboard</span>
               </span>
             </Link>
 
             <Link href="/dashboard/counsellor/appointment">
-              <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor/appointment"
+                    ? "bg-white/10"
+                    : ""
+                }`}
+              >
                 <LuCalendarDays size={20} />
                 <span>Appointments</span>
               </span>
             </Link>
 
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
-              <PiUsers size={20} />
-              <span>Clients</span>
-            </span>
+            <Link href="/dashboard/counsellor/clients">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor/clients"
+                    ? "bg-white/10"
+                    : ""
+                }`}
+              >
+                <PiUsers size={20} />
+                <span>Clients</span>
+              </span>
+            </Link>
 
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
-              <AiOutlineMessage size={20} />
-              <span>Messages</span>
-            </span>
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
-              <FaRegStar size={20} />
-              <span>Reviews</span>
-            </span>
-            <span className="flex justify-start items-center gap-2 hover:bg-white/10 py-2 px-2 rounded-md transition-all ease-in-out duration-200 delay-100 cursor-pointer">
-              <GrCreditCard size={20} />
-              <span>Payments</span>
-            </span>
+            <Link href="/dashboard/counsellor/messages">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor/messages"
+                    ? "bg-white/10"
+                    : ""
+                }`}
+              >
+                <AiOutlineMessage size={20} />
+                <span>Messages</span>
+              </span>
+            </Link>
+
+            <Link href="/dashboard/counsellor/review">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor/review"
+                    ? "bg-white/10"
+                    : ""
+                }`}
+              >
+                <FaRegStar size={20} />
+                <span>Reviews</span>
+              </span>
+            </Link>
+
+            <Link href="/dashboard/counsellor/payments">
+              <span
+                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor/payments"
+                    ? "bg-white/10"
+                    : ""
+                }`}
+              >
+                <GrCreditCard size={20} />
+                <span>Payments</span>
+              </span>
+            </Link>
           </span>
         </span>
 
         <span
           onClick={handleClick}
-          className="flex relative justify-between w-full"
+          className={`flex relative justify-between w-full items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+            pathname === "/dashboard/counsellor/appointment"
+              ? "bg-white/10"
+              : ""
+          }`}
         >
           {settingsToggle && (
-            <div className="absolute bottom-10 bg-white/5 w-full">
+            <div className="absolute bottom-12 left-0 bg-white/5 w-full">
               <span className="flex flex-col px-2 py-4 border rounded-md gap-2">
                 <span className="text-[14px]">Account Settings</span>
                 <span className="text-[14px]">Settings</span>
@@ -82,7 +135,7 @@ export default function Sidebar() {
               </span>
             </div>
           )}
-          <span className="flex justify-start items-center gap-2">
+          <span className="flex justify-start items-center gap-2 ">
             <IoSettingsOutline size={20} />
             <span>Settings</span>
           </span>
