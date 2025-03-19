@@ -37,16 +37,16 @@ export default function RootLayout({
     "/join",
     "/login",
     "/form/registerStudent",
-    "/form/registerCounsellor",
+    "/form/registerCounselor",
     "/form/login",
     "/form",
     "/dashboard/student",
-    "/dashboard/counsellor",
-    "/dashboard/counsellor/appointment",
-    "/dashboard/counsellor/clients",
-    "/dashboard/counsellor/messages",
-    "/dashboard/counsellor/review",
-    "/dashboard/counsellor/payments",
+    "/dashboard/counselor",
+    "/dashboard/counselor/appointment",
+    "/dashboard/counselor/clients",
+    "/dashboard/counselor/messages",
+    "/dashboard/counselor/review",
+    "/dashboard/counselor/payments",
   ];
   const hideLayout = hideLayoutRoutes.includes(pathname);
 

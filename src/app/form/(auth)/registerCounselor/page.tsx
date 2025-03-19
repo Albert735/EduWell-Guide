@@ -127,7 +127,7 @@ export default function RegisterPage() {
             </span>
           </span>
 
-          <Link href="/dashboard/counsellor">
+          <Link href="/dashboard/counselor">
             <Button type="submit" className="w-full">
               Sign Up
             </Button>

@@ -23,16 +23,16 @@ function Navbar() {
       <div className="hidden md:flex items-center">
         <ul className="flex gap-7">
           <Link
-            href="/findcounsellors"
+            href="/findcounselors"
             className={`px-4 py-2 rounded-lg transition-all duration-300
           ${
-            pathname === "/findcounsellors"
+            pathname === "/findcounselors"
               ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
               : "text-gray-700 dark:text-gray-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
           }
         `}
           >
-            <li> Find Counsellors</li>
+            <li> Find counselors</li>
           </Link>
           <Link
             href="/resources"

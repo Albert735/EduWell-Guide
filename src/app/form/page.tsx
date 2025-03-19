@@ -27,9 +27,9 @@ export default function JoinPage() {
               Student
             </Button>
           </Link>
-          <Link href="/form/registerCounsellor">
+          <Link href="/form/registerCounselor">
             <Button variant={"default"} className="w-[20rem]">
-              Counsellor
+              counselor
             </Button>
           </Link>
         </div>

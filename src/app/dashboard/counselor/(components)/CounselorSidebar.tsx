@@ -40,10 +40,10 @@ export default function Sidebar() {
           </span>
 
           <span className="flex flex-col gap-2">
-            <Link href="/dashboard/counsellor">
+            <Link href="/dashboard/counselor">
               <span
                 className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor"
+                  pathname === "/dashboard/counselor"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -53,10 +53,10 @@ export default function Sidebar() {
               </span>
             </Link>
 
-            <Link href="/dashboard/counsellor/appointment">
+            <Link href="/dashboard/counselor/appointment">
               <span
                 className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor/appointment"
+                  pathname === "/dashboard/counselor/appointment"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -66,10 +66,10 @@ export default function Sidebar() {
               </span>
             </Link>
 
-            <Link href="/dashboard/counsellor/clients">
+            <Link href="/dashboard/counselor/clients">
               <span
                 className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor/clients"
+                  pathname === "/dashboard/counselor/clients"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -79,10 +79,10 @@ export default function Sidebar() {
               </span>
             </Link>
 
-            <Link href="/dashboard/counsellor/messages">
+            <Link href="/dashboard/counselor/messages">
               <span
                 className={`flex justify-between items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor/messages"
+                  pathname === "/dashboard/counselor/messages"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -100,10 +100,10 @@ export default function Sidebar() {
               </span>
             </Link>
 
-            <Link href="/dashboard/counsellor/review">
+            <Link href="/dashboard/counselor/review">
               <span
                 className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor/review"
+                  pathname === "/dashboard/counselor/review"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -113,10 +113,10 @@ export default function Sidebar() {
               </span>
             </Link>
 
-            <Link href="/dashboard/counsellor/payments">
+            <Link href="/dashboard/counselor/payments">
               <span
                 className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor/payments"
+                  pathname === "/dashboard/counselor/payments"
                     ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
@@ -131,7 +131,7 @@ export default function Sidebar() {
         <span
           onClick={handleClick}
           className={`flex relative justify-between w-full items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-            pathname === "/dashboard/counsellor/appointment"
+            pathname === "/dashboard/counselor/appointment"
               ? "dark:bg-white/10 bg-black/10"
               : ""
           }`}

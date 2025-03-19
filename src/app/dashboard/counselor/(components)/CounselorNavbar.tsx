@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CounsellorNavbar({
+export default function counselorNavbar({
   children,
 }: {
   children: React.ReactNode;
