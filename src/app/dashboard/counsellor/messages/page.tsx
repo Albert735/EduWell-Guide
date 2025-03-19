@@ -163,7 +163,7 @@ export default function Messages() {
               </span>
               <span className="flex flex-col items-end gap-2">
                 <p className="text-xs text-gray-400">{chat.time}</p>
-                <span className="w-[1.2rem] text-xs text-center h-[1rem] bg-green-500 rounded-full">
+                <span className="w-[1.2rem] text-xs text-center h-[1rem] bg-blue-300 rounded-full">
                   3
                 </span>
               </span>

@@ -42,8 +42,10 @@ export default function Sidebar() {
           <span className="flex flex-col gap-2">
             <Link href="/dashboard/counsellor">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
-                  pathname === "/dashboard/counsellor" ? "bg-white/10" : ""
+                className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                  pathname === "/dashboard/counsellor"
+                    ? "dark:bg-white/10 bg-black/10"
+                    : ""
                 }`}
               >
                 <RxDashboard size={20} />
@@ -53,9 +55,9 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/appointment">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/appointment"
-                    ? "bg-white/10"
+                    ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
               >
@@ -66,9 +68,9 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/clients">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/clients"
-                    ? "bg-white/10"
+                    ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
               >
@@ -79,9 +81,9 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/messages">
               <span
-                className={`flex justify-between items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-between items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/messages"
-                    ? "bg-white/10"
+                    ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
               >
@@ -90,8 +92,8 @@ export default function Sidebar() {
                   <span>Messages</span>
                 </span>
 
-                <span className="relative w-5 h-5 bg-white rounded-md">
-                  <span className="text-sm text-black absolute left-1.5 ">
+                <span className="relative w-5 h-5 dark:bg-white bg-black  rounded-md">
+                  <span className="text-sm dark:text-black text-white absolute left-1.5 ">
                     0
                   </span>
                 </span>
@@ -100,9 +102,9 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/review">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/review"
-                    ? "bg-white/10"
+                    ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
               >
@@ -113,9 +115,9 @@ export default function Sidebar() {
 
             <Link href="/dashboard/counsellor/payments">
               <span
-                className={`flex justify-start items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
                   pathname === "/dashboard/counsellor/payments"
-                    ? "bg-white/10"
+                    ? "dark:bg-white/10 bg-black/10"
                     : ""
                 }`}
               >
@@ -128,9 +130,9 @@ export default function Sidebar() {
 
         <span
           onClick={handleClick}
-          className={`flex relative justify-between w-full items-center gap-2 hover:bg-white/10  py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+          className={`flex relative justify-between w-full items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
             pathname === "/dashboard/counsellor/appointment"
-              ? "bg-white/10"
+              ? "dark:bg-white/10 bg-black/10"
               : ""
           }`}
         >
