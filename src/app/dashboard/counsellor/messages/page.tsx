@@ -15,12 +15,6 @@ import { BsCameraVideo } from "react-icons/bs";
 import { LuSend } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 
-
-
-
-
-
-
 // Defining the structure of a chat message.
 type DemoMessage = {
   id: number;
@@ -30,8 +24,6 @@ type DemoMessage = {
   image: string;
   messages?: { id: number; message: string }[];
 };
-
-
 
 // Sample data for demo messages.
 const demoMessages: DemoMessage[] = [
@@ -116,12 +108,15 @@ export default function Messages() {
 
   return (
     <div className="h-[calc(100vh-5.5rem)]">
-      <ResizablePanelGroup direction="horizontal">
+      <ResizablePanelGroup
+        direction="horizontal"
+        className="max-w-[100vw] overflow-hidden"
+      >
         <ResizablePanel
           defaultSize={25}
           minSize={20}
           maxSize={25}
-          className="flex flex-col px-2 gap-2 bg-white/5 "
+          className="flex flex-col px-2 gap-2 bg-white/5  flex-shrink-0 w-[25%] max-w-[25%]"
         >
           <span className="flex justify-between items-center">
             <h1>Chats</h1>
