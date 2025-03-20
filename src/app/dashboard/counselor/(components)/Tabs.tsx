@@ -34,8 +34,8 @@ const TabButton: React.FC<TabButtonProps> = ({
   <button
     className={`px-4 py-2 font-medium transition ${
       isActive
-        ? "border-b-2 border-blue-500 text-blue-500"
-        : "text-gray-600 hover:text-blue-500"
+        ? "border-b-2 border-black dark:border-white dark:text-white text-black"
+        : "text-gray-600 dark:text-white hover:text-gray-500 hover:dark:text-gray-400"
     }`}
     onClick={() => onClick(id)}
   >
@@ -86,7 +86,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
       </div>
 
       {/* Tab Content */}
-      <div className="mt-4 p-4 border rounded-lg bg-white shadow">
+      <div className="mt-4 p-4 border rounded-lg h-[calc(70vh-5rem)]">
         {
           (
             React.Children.toArray(children).find((child) => {
@@ -104,7 +104,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
 
 // Tab component
 const Tab: React.FC<TabProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="">{children}</div>;
 };
 
 export { Tabs, Tab };

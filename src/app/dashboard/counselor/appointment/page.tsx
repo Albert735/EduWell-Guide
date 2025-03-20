@@ -16,7 +16,7 @@ export default function Appointments() {
       <div className="cards flex justify-start items-center gap-[3rem] w-full">
         {patientType.map((patient) => (
           <span key={patient.id}>
-            <span className="flex flex-col border gap-4  rounded-lg w-[20rem]">
+            <span className="flex flex-col border  gap-4  rounded-lg w-[20rem]">
               <span className="card-category text-gray-500 px-4 py-2">
                 {patient.category}
               </span>
@@ -35,15 +35,15 @@ export default function Appointments() {
       </div>
       <div className="tabs">
         <Tabs>
-          <Tab id="info" title="Customer Info">
+          <Tab id="in-queue" title="In Queue">
             <p className="text-gray-700">We are showing customer info here.</p>
           </Tab>
-          <Tab id="payment-history" title="Payment History">
+          <Tab id="accepted" title="Accepted">
             <p className="text-gray-700">
               We are showing customer payment history here.
             </p>
           </Tab>
-          <Tab id="payment-methods" title="Payment Methods">
+          <Tab id="declined" title="Declined">
             <p className="text-gray-700">
               We are showing customer payment methods here.
             </p>
