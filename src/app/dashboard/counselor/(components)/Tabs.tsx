@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Define TabProps interface
 interface TabProps {
@@ -86,17 +87,20 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
       </div>
 
       {/* Tab Content */}
+
       <div className="mt-4 p-4 border rounded-lg h-[calc(70vh-5rem)]">
-        {
-          (
-            React.Children.toArray(children).find((child) => {
-              if (React.isValidElement<TabProps>(child)) {
-                return child.props.id === activeTab;
-              }
-              return false;
-            }) as React.ReactElement<TabProps> | undefined
-          )?.props.children
-        }
+        <ScrollArea className="h-full w-full">
+          {
+            (
+              React.Children.toArray(children).find((child) => {
+                if (React.isValidElement<TabProps>(child)) {
+                  return child.props.id === activeTab;
+                }
+                return false;
+              }) as React.ReactElement<TabProps> | undefined
+            )?.props.children
+          }
+        </ScrollArea>
       </div>
     </div>
   );
