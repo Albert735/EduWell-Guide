@@ -112,9 +112,17 @@ const demoClients = [
 
 export default function Clients() {
   return (
-    <div className="p-4">
-      <span className="px-2">
+    <div className="flex flex-col p-4 gap-4">
+      {/* <span className="px-2">
         <h1 className="text-lg font-semibold">Clients</h1>
+      </span> */}
+
+      <span className="">
+        <input
+          type="text"
+          placeholder="Filter clients..."
+          className="w-[25rem] h-11 outline-none p-4 rounded-md bg-transparent border"
+        />
       </span>
 
       <Table className="w-full   rounded-lg overflow-hidden">
