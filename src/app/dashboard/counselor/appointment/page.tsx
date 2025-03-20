@@ -7,13 +7,39 @@ import { Button } from "@/components/ui/button";
 import { RxCross2 } from "react-icons/rx";
 import { FaCheck } from "react-icons/fa6";
 
-const patientType = [
+// Define types for the data structures
+type PatientType = {
+  id: number;
+  category: string;
+  number: number;
+  plus: number;
+};
+
+type Patient = {
+  id: string;
+  name: string;
+  subsciption: "Member" | "Regular" | "Assurance";
+  dateOfRegister: string;
+  phone: string;
+  email: string;
+  image: string;
+};
+
+type Counselor = {
+  name: string;
+  appointmentSchedule: string;
+  image: string;
+};
+
+// Demo data
+const patientType: PatientType[] = [
   { id: 0, category: "All Apply Queue", number: 1432, plus: 4 },
   { id: 1, category: "New Patient Regular", number: 432, plus: 16 },
   { id: 2, category: "New Patient Member", number: 500, plus: 2 },
   { id: 3, category: "New Patient Assurance", number: 132, plus: 5 },
 ];
-const patients = [
+
+const patients: Patient[] = [
   {
     id: "#66423",
     name: "Kathryn Murphy",
@@ -44,41 +70,10 @@ const patients = [
     image:
       "/assets/female-freelancer-writes-notes-notepad-notes-future-plans-checklist-organization-free-time-poses-outside-against-buildings.jpg",
   },
-  {
-    id: "#66426",
-    name: "Kathryn Murphy",
-    subsciption: "Member",
-    dateOfRegister: "12 Dec, 2025",
-    phone: "024-467-0987",
-    email: "kathrynymur234@outlook.com",
-    image:
-      "/assets/female-freelancer-writes-notes-notepad-notes-future-plans-checklist-organization-free-time-poses-outside-against-buildings.jpg",
-  },
-  {
-    id: "#66427",
-    name: "John Doe",
-    subsciption: "Regular",
-    dateOfRegister: "15 Jan, 2026",
-    phone: "024-467-1234",
-    email: "johndoe123@outlook.com",
-    image:
-      "/assets/female-freelancer-writes-notes-notepad-notes-future-plans-checklist-organization-free-time-poses-outside-against-buildings.jpg",
-  },
-  {
-    id: "#66428",
-    name: "Jane Smith",
-    subsciption: "Assurance",
-    dateOfRegister: "20 Feb, 2026",
-    phone: "024-467-5678",
-    email: "janesmith567@outlook.com",
-    image:
-      "/assets/female-freelancer-writes-notes-notepad-notes-future-plans-checklist-organization-free-time-poses-outside-against-buildings.jpg",
-  },
-
-  // Add 7 more patient entries...
+  // Add more patients...
 ];
 
-const counselors = [
+const counselors: Counselor[] = [
   {
     name: "Dr. Jedd Spence",
     appointmentSchedule: "2 March, 2026 - 3:00pm",
@@ -94,36 +89,21 @@ const counselors = [
     appointmentSchedule: "10 March, 2026 - 1:00pm",
     image: "/assets/modern-man-beige-suit.jpg",
   },
-  {
-    name: "Dr. Jedd Spence",
-    appointmentSchedule: "2 March, 2026 - 3:00pm",
-    image: "/assets/modern-man-beige-suit.jpg",
-  },
-  {
-    name: "Dr. Emily Carter",
-    appointmentSchedule: "5 March, 2026 - 10:00am",
-    image: "/assets/modern-man-beige-suit.jpg",
-  },
-  {
-    name: "Dr. Michael Brown",
-    appointmentSchedule: "10 March, 2026 - 1:00pm",
-    image: "/assets/modern-man-beige-suit.jpg",
-  },
-  // Add 7 more counselor entries...
+  // Add more counselors...
 ];
 
 export default function Appointments() {
   return (
     <div className="space-y-5">
-      <div className="header"> Approval New Client</div>
+      <div className="header">Approval New Client</div>
       <div className="cards flex justify-start items-center gap-[3rem] w-full">
         {patientType.map((patient) => (
           <span key={patient.id}>
-            <span className="flex flex-col border  gap-4  rounded-lg w-[20rem]">
+            <span className="flex flex-col border gap-4 rounded-lg w-[20rem]">
               <span className="card-category text-gray-500 px-4 py-2">
                 {patient.category}
               </span>
-              <span className="card-number font-medium px-4  text-[1.5rem] border-l-4 w-full border-l-blue-500">
+              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-500">
                 {patient.number} Patient
               </span>
               <span className="card-number flex gap-2 px-4 py-2">
