@@ -34,8 +34,8 @@ function Testimonial() {
               <Image
                 src="/assets/photo-serious-hipster-girl-with-hair-buns-blue-eyeliner-dressed-formal-dark-green-jacket-looks-directly-camera-walks-outdoors-poses-listens-something-attentively.jpg"
                 alt="Student"
-                layout="fill" // ✅ Correct way to make image fill container
-                objectFit="cover" // ✅ Ensures the image scales properly
+                fill
+                style={{ objectFit: "cover" }}
                 className="rounded-full"
               />
             </div>
@@ -70,11 +70,12 @@ function Testimonial() {
               <Image
                 src="/assets/cheerful-elegant-businesswoman-suit.jpg"
                 alt="Student"
-                layout="fill" // ✅ Correct way to make image fill container
-                objectFit="cover" // ✅ Ensures the image scales properly
+                fill
+                style={{ objectFit: "cover" }}
                 className="rounded-full"
               />
             </div>
+
             <span>
               <h2 className="text-[1rem] font-bold">Wilma Smith</h2>
               <p className="text-sm text-gray-400">Student, Academic City</p>
