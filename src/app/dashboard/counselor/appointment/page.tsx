@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, Tab } from "../(components)/Tabs";
 import { RiMentalHealthLine } from "react-icons/ri";
@@ -6,6 +9,16 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { RxCross2 } from "react-icons/rx";
 import { FaCheck } from "react-icons/fa6";
+import { BsThreeDots } from "react-icons/bs";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 // Define types for the data structures
 type PatientType = {
@@ -93,6 +106,12 @@ const counselors: Counselor[] = [
 ];
 
 export default function Appointments() {
+  const [open, setOpen] = useState(false);
+
+  const handleDropdown = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="space-y-5">
       <div className="header">Approval New Client</div>
@@ -118,7 +137,72 @@ export default function Appointments() {
       </div>
       <div className="tabs">
         <Tabs>
-          <Tab id="in-queue" title="In Queue">
+          <Tab id="upcoming" title="Upcoming">
+            <Table className="w-full h-full   rounded-lg overflow-hidden">
+              <TableCaption>Your current schedule.</TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[200px]">Date</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead>Subscription</TableHead>
+                  <TableHead className="">Engagement</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead className="">More</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    <span>
+                      <p>Today</p>
+                      <p className="text-gray-500">09:00 - 09:30 am</p>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <p className="font-medium">Rosemarie Snith</p>
+                      <p className="text-gray-500">rosemarie876@outlook.com</p>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <Badge variant={"blue"}>Member</Badge>
+                    </span>
+                  </TableCell>
+                  <TableCell className="">
+                    <span>
+                      <p className="text-gray-500">Online</p>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <Badge variant={"secondary"}>Accepted</Badge>
+                    </span>
+                  </TableCell>
+                  <TableCell className="">
+                    <span>
+                      <BsThreeDots
+                        className="cursor-pointer"
+                        size={20}
+                        onClick={handleDropdown}
+                      />
+                    </span>
+
+                    {open && (
+                      <div className="flex flex-col justify-center items-center gap-2 border z-50 absolute right-10 dark:bg-black bg-white   py-2 px-4 rounded-lg">
+                        <span className="flex flex-col gap-2">
+                          <Button variant={"outline"}>Cancel</Button>
+                          <Button variant={"ghost"}>Details</Button>
+                        </span>
+                      </div>
+                    )}
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+            {/* <div className="cards flex flex-wrap justify-between items-center gap-[5rem] w-full px-2"></div> */}
+          </Tab>
+          <Tab id="pending" title="Pending">
             <div className="cards flex flex-wrap justify-start items-center gap-[5rem] w-full">
               {patients.map((patient, index) => (
                 <span
@@ -237,15 +321,74 @@ export default function Appointments() {
               ))}
             </div>
           </Tab>
-          <Tab id="accepted" title="Accepted">
+          {/* <Tab id="accepted" title="Accepted">
             <p className="text-gray-700">
               We are showing customer payment history here.
             </p>
-          </Tab>
+          </Tab> */}
           <Tab id="declined" title="Declined">
-            <p className="text-gray-700">
-              We are showing customer payment methods here.
-            </p>
+            <Table className="w-full h-full   rounded-lg overflow-hidden">
+              <TableCaption>Your current schedule.</TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>ID</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead className="w-[200px]">Date</TableHead>{" "}
+                  <TableHead>Status</TableHead>
+                  <TableHead>Subscription</TableHead>
+                  <TableHead className="">More</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    <span className="flex items-center gap-2">
+                      <RiMentalHealthLine size={20} />
+                      <p>#66423</p>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <p className="font-medium">Rosemarie Snith</p>
+                      <p className="text-gray-500">rosemarie876@outlook.com</p>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <p>11/12/2022</p>
+                    </span>
+                  </TableCell>
+                  <TableCell className="">
+                    <span>
+                      <Badge variant={"destructive"}>Declined</Badge>
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span>
+                      <Badge variant={"yellow"}>Assurance</Badge>
+                    </span>
+                  </TableCell>
+                  <TableCell className="">
+                    <span>
+                      <BsThreeDots
+                        className="cursor-pointer"
+                        size={20}
+                        onClick={handleDropdown}
+                      />
+                    </span>
+
+                    {open && (
+                      <div className="flex flex-col justify-center items-center gap-2 border z-50 absolute right-10 dark:bg-black bg-white   py-2 px-4 rounded-lg">
+                        <span className="flex flex-col gap-2">
+                          <Button variant={"ghost"}>view</Button>
+                          <Button variant={"outline"}>delete</Button>
+                        </span>
+                      </div>
+                    )}
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </Tab>
         </Tabs>
       </div>
