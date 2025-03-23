@@ -68,9 +68,8 @@ function Benefits() {
             <Image
               src="/assets/people-meeting-support-group.jpg"
               alt="Hero Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover" }}
               className="hover:scale-110 transition-all ease-in-out duration-300"
               priority
             />
@@ -80,9 +79,8 @@ function Benefits() {
             <Image
               src="/assets/serious-students-sitting-table-library-working-with-laptop.jpg"
               alt="Hero Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover" }}
               className="hover:scale-110 transition-all ease-in-out duration-300 rounded-lg"
               priority
             />

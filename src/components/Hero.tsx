@@ -9,9 +9,8 @@ const ImageCard = ({ src, alt }: { src: string; alt: string }) => (
     <Image
       src={src}
       alt={alt}
-      layout="fill"
-      objectFit="cover"
-      objectPosition="center"
+      fill
+      style={{ objectFit: "cover" }}
       sizes="(max-width: 768px) 100vw, 50vw"
       priority
     />
