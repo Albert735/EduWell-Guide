@@ -1,12 +1,16 @@
 "use client";
 import { useState } from "react";
 import { IoArrowForward } from "react-icons/io5";
+import { VscQuote } from "react-icons/vsc";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+// import Image from "next/image";
 
 interface TopicType {
   name: string;
@@ -152,8 +156,8 @@ export default function ResourcesPage() {
 
   return (
     <section className="container flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-[7rem] py-[5rem]">
-      <div className="flex flex-col justify-center items-center gap-4">
-        <h1 className="text-3xl font-bold text-center">
+      <div className="flex flex-col justify-center items-center gap-4 space-y-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-center">
           Unlock Your Full Potential with Expert <br /> Advice & Free Resources
         </h1>
         <p className="text-center max-w-[40rem] text-gray-500 leading-relaxed">
@@ -162,6 +166,8 @@ export default function ResourcesPage() {
           and study hacks—all in one place.
         </p>
       </div>
+
+      <div className="bg-[url(/assets/blurry-gradient-haikei.png)] bg-cover bg-center bg-no-repeat rounded-xl w-full h-[10rem]"></div>
 
       <div className="container mx-auto p-4 ">
         {/* <div>
@@ -254,6 +260,8 @@ export default function ResourcesPage() {
         </div>
       </div>
 
+      {/* blog and faq  */}
+
       <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-4 gap-[3rem] w-full">
         <div className="">
           <h2 className="text-3xl font-bold mb-8">FAQ</h2>
@@ -272,6 +280,26 @@ export default function ResourcesPage() {
             </AccordionItem>
           ))}
         </Accordion>
+      </div>
+
+      {/* cta  */}
+      <div className="container flex flex-col justify-center items-center mx-auto p-4 w-full space-y-4">
+        <h1 className="text-3xl font-bold text-center">
+          Take the Next Step Toward <br />
+          Your Success!
+        </h1>
+        <p className="text-center max-w-[30rem] text-gray-500 leading-relaxed flex items-start gap-2">
+          <VscQuote size={20} />
+          Ready to improve your academic and personal life? <br /> Find the
+          right counselor today!
+          <VscQuote size={20} className="rotate-180" />
+        </p>
+
+        <Link href="/join">
+          <Button variant="default" className="mt-4 rounded-full">
+            Get Started
+          </Button>
+        </Link>
       </div>
     </section>
   );
