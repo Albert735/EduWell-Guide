@@ -92,7 +92,7 @@ function Team() {
                   <CardContent className="text-center">
                     <div className="flex flex-col gap-3 justify-center items-center text-center">
                       <h2 className="text-[1rem] font-bold">{member.name}</h2>
-                      <p className="text-sm text-gray-400">{member.role}</p>
+                      <p className="text-sm -400">{member.role}</p>
                       <p className="text-[13px]">{member.description}</p>
                       <div className="flex gap-4">
                         <FaXTwitter className="w-6 h-6" />

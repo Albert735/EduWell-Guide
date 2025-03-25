@@ -17,7 +17,7 @@ export default function JoinPage() {
       <div className="relative flex flex-col items-center justify-center  w-full h-full gap-5">
         <div className="flex flex-col items-center justify-center space-y-4 py-[1rem]">
           <h1 className="text-2xl font-bold">Choose Account Type</h1>
-          <p className="text-center w-[15rem] text-gray-400">
+          <p className="text-center w-[15rem] -400">
             Choose the type of account you want to create
           </p>
         </div>

@@ -34,7 +34,7 @@ export default function LoginPage() {
             <h1 className="text-2xl font-bold">EduWell Guide</h1>
             <span className="flex flex-col items-center gap-1">
               <h2 className="text-xl font-normal">Welcome Back!</h2>
-              <span className="text-gray-400">Please enter your details</span>
+              <span className="-400">Please enter your details</span>
             </span>
           </span>
 
@@ -42,10 +42,7 @@ export default function LoginPage() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-4"
           >
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="email" className="text-sm font-medium -700">
               Email
             </label>
             <input
@@ -56,15 +53,10 @@ export default function LoginPage() {
               className="p-2 border border-white/15 rounded-md w-[20rem] bg-transparent"
             />
             {errors.email && (
-              <span className="text-red-500 text-sm">
-                {errors.email.message}
-              </span>
+              <span className="text-red text-sm">{errors.email.message}</span>
             )}
 
-            <label
-              htmlFor="password"
-              className="text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="password" className="text-sm font-medium -700">
               Password
             </label>
             <input
@@ -77,7 +69,7 @@ export default function LoginPage() {
               className="p-2 border border-white/15 rounded-md w-[20rem] bg-transparent"
             />
             {errors.passwordRequired && (
-              <span className="text-red-500 text-sm">
+              <span className="text-red text-sm">
                 {errors.passwordRequired.message}
               </span>
             )}
@@ -86,7 +78,7 @@ export default function LoginPage() {
               <Checkbox />
               <span className="flex flex-col gap-1">
                 <h2 className="text-sm font-medium">Remember me</h2>
-                <span className="text-sm text-gray-400">
+                <span className="text-sm -400">
                   Save login details for next time
                 </span>
               </span>
@@ -101,10 +93,10 @@ export default function LoginPage() {
         <hr className="my-4 w-[15rem] flex justify-center items-center" />
 
         <div className="flex flex-col items-center gap-6">
-          <span className="flex text-sm text-gray-400 gap-3">
+          <span className="flex text-sm -400 gap-3">
             Don&apos;t have an account?
             <Link href="/form">
-              <span className="text-blue-500">Sign up</span>
+              <span className="text-blue">Sign up</span>
             </Link>
           </span>
 
@@ -121,7 +113,7 @@ export default function LoginPage() {
               />
               Sign in with Google
             </Button>
-            <Button className="flex items-center gap-2 w-[20rem] bg-[#1877F2] hover:bg-blue-500 text-white">
+            <Button className="flex items-center gap-2 w-[20rem] bg-[#1877F2] hover:bg-blue text-white">
               <FaFacebook />
               Sign in with Facebook
             </Button>
@@ -133,7 +125,7 @@ export default function LoginPage() {
         </div>
 
         <div>
-          <p className="text-sm text-gray-400">@2025 EduWell Guide</p>
+          <p className="text-sm -400">@2025 EduWell Guide</p>
         </div>
       </div>
     </div>

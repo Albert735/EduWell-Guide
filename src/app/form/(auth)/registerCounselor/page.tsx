@@ -39,7 +39,7 @@ export default function RegisterPage() {
       <div className="flex flex-col items-center justify-center gap-8 w-[25rem]">
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-2xl font-bold">Create your account</h1>
-          <span className="text-gray-400">Lets get started</span>
+          <span className="-400">Lets get started</span>
           <Button variant="outline" className="gap-2 w-[20rem]">
             <Image
               src="/icons/icons8-google-480.png"
@@ -66,9 +66,7 @@ export default function RegisterPage() {
               className="p-2 border dark:border-white/15 rounded-md bg-transparent"
             />
             {errors.email && (
-              <span className="text-red-500 text-sm">
-                {errors.email.message}
-              </span>
+              <span className="text-red text-sm">{errors.email.message}</span>
             )}
           </span>
 
@@ -94,7 +92,7 @@ export default function RegisterPage() {
               className="p-2 border dark:border-white/15 rounded-md bg-transparent"
             />
             {errors.password && (
-              <span className="text-red-500 text-sm">
+              <span className="text-red text-sm">
                 {errors.password.message}
               </span>
             )}
@@ -113,7 +111,7 @@ export default function RegisterPage() {
               className="p-2 border dark:border-white/15 rounded-md bg-transparent"
             />
             {errors.confirmPassword && (
-              <span className="text-red-500 text-sm">
+              <span className="text-red text-sm">
                 {errors.confirmPassword.message}
               </span>
             )}
@@ -121,7 +119,7 @@ export default function RegisterPage() {
 
           <span className="flex gap-3">
             <Checkbox />
-            <span className="text-sm dark:text-gray-300">
+            <span className="text-sm dark:-300">
               By signing up, you agree to our Terms of Service and acknowledge
               that you have read and understand our Privacy Policy.
             </span>
@@ -137,7 +135,7 @@ export default function RegisterPage() {
         <div className="flex f gap-2">
           <span>Already have an account?</span>
           <Link href="/form/login">
-            <span className="text-blue-500 cursor-pointer">Log in</span>
+            <span className="text-blue cursor-pointer">Log in</span>
           </Link>
         </div>
       </div>

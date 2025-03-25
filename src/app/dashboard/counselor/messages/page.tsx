@@ -158,11 +158,11 @@ export default function Messages() {
                 </div>
                 <span className="flex flex-col justify-start items-start">
                   <p className="font-medium">{chat.name}</p>
-                  <p className="text-sm text-gray-400">{chat.message}</p>
+                  <p className="text-sm -400">{chat.message}</p>
                 </span>
               </span>
               <span className="flex flex-col items-end gap-2">
-                <p className="text-xs text-gray-400">{chat.time}</p>
+                <p className="text-xs -400">{chat.time}</p>
                 <span className="w-[1.2rem] text-xs text-center h-[1rem] bg-blue-300 rounded-full">
                   3
                 </span>
@@ -190,7 +190,7 @@ export default function Messages() {
 
                   <span className="flex flex-col justify-start items-start">
                     <p className="font-medium">{selectedMessage.name}</p>
-                    <p className="text-sm text-gray-400">online</p>
+                    <p className="text-sm -400">online</p>
                   </span>
                 </span>
 
@@ -235,7 +235,7 @@ export default function Messages() {
               </div>
             </div>
           ) : (
-            <div className="flex items-center justify-center h-full text-gray-400">
+            <div className="flex items-center justify-center h-full -400">
               Select a chat to start messaging
             </div>
           )}

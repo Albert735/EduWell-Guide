@@ -32,7 +32,7 @@ function Benefits() {
           <h1 className="text-3xl md:text-4xl font-bold">
             Unlock Your Potential with <br /> Expert Guidance
           </h1>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm  mt-2">
             EduWell Guide connects you with experienced counselors tailored to
             your needs. Access academic, mental health, and career support all
             in one place.
@@ -43,14 +43,14 @@ function Benefits() {
         <div className="flex flex-col xl:flex-row gap-10">
           <div className="flex flex-col gap-3">
             <h2 className="font-semibold">Expert Counselors</h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm ">
               Find qualified professionals ready to assist you with personalized
               guidance.
             </p>
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="font-semibold">Community Support</h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm ">
               Engage in forums to share experiences and gain insights from
               fellow students.
             </p>

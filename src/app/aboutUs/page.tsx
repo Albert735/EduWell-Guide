@@ -34,7 +34,7 @@ export default function AboutUsPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-center">
           We&apos;re making a difference <br /> in the lives of students
         </h1>
-        <p className="text-center max-w-[40rem] text-gray-500 leading-relaxed">
+        <p className="text-center max-w-[40rem]  leading-relaxed">
           We connect students with expert counselors to support their academic
           success, mental wellness, and personal growth, helping them with time
           management, stress relief, and career planning.
@@ -78,7 +78,7 @@ export default function AboutUsPage() {
 
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="text-3xl font-bold">Meet Our Team</h2>
-          <span className="text-gray-500 max-w-[40rem] leading-relaxed text-center">
+          <span className=" max-w-[40rem] leading-relaxed text-center">
             EduWell Guide is built by passionate developers, counselors, and
             educators who understand the challenges students face. Our team is
             committed to making high-quality guidance accessible, easy to use,
@@ -110,7 +110,7 @@ export default function AboutUsPage() {
           <div className="flex flex-col gap-4">
             <span className="flex flex-col gap-4">
               <h3 className="text-xl font-bold">1. Expert Guidance</h3>
-              <span className="max-w-[40rem] text-gray-500 leading-relaxed">
+              <span className="max-w-[40rem]  leading-relaxed">
                 Our team of experienced counselors are here to help you navigate
                 the challenges of university life, providing expert advice and
                 support.
@@ -127,7 +127,7 @@ export default function AboutUsPage() {
 
             <span className="flex flex-col gap-4">
               <h3 className="text-xl font-bold">2. What We Offer</h3>
-              <span className="max-w-[40rem] text-gray-500 leading-relaxed">
+              <span className="max-w-[40rem]  leading-relaxed">
                 <ul className="list-disc list-inside">
                   <li>
                     Academic Counseling: Get expert advice on coursework, study
@@ -157,7 +157,7 @@ export default function AboutUsPage() {
         <span className="flex flex-col lg:flex-row w-full justify-between items-center gap-4">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl md:text-5xl font-bold">Get involved</h1>
-            <span className="max-w-[40rem] text-gray-500 leading-relaxed">
+            <span className="max-w-[40rem]  leading-relaxed">
               Are you a counselor or mentor looking to make an impact? <br />
               Join EduWell Guide and help shape the future of student success!{" "}
             </span>

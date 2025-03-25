@@ -28,7 +28,7 @@ function Navbar() {
           ${
             pathname === "/findcounselors"
               ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-              : "text-gray-700 dark:text-gray-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+              : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
           }
         `}
           >
@@ -40,7 +40,7 @@ function Navbar() {
               ${
                 pathname === "/resources"
                   ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                  : "text-gray-700 dark:text-gray-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                  : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
               }
             `}
           >
@@ -53,7 +53,7 @@ function Navbar() {
             ${
               pathname === "/aboutUs"
                 ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                : "text-gray-700 dark:text-gray-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
             }
           `}
           >
@@ -66,13 +66,13 @@ function Navbar() {
             ${
               pathname === "/support"
                 ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                : "text-gray-700 dark:text-gray-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
             }
           `}
           >
             <span className="flex items-center gap-2">
               <li>Support</li>
-              <ChevronDownIcon className="w-5 h-5 text-gray-600" />
+              <ChevronDownIcon className="w-5 h-5 -600" />
             </span>
           </Link>
         </ul>

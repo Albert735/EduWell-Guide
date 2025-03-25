@@ -52,7 +52,7 @@ function Hero() {
 
       {/* Description and Buttons */}
       <div className="flex flex-col items-center gap-5">
-        <p className="text-center max-w-[40rem] text-gray-500 leading-relaxed">
+        <p className="text-center max-w-[40rem]  leading-relaxed">
           EduWell Guide connects university students with qualified counselors
           for academic, mental health, and career support. Experience a
           community-driven platform designed to foster growth and well-being.

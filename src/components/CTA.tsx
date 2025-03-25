@@ -10,7 +10,7 @@ function CTA() {
           <h1 className="text-[2rem] font-bold">
             Join EduWell for Expert <br /> Guidance.
           </h1>
-          <p className="text-sm text-gray-400 leading-loose">
+          <p className="text-sm -400 leading-loose">
             Sign up for free and connect with counselors who understand your
             <br />
             needs and challenges.

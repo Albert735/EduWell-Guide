@@ -29,7 +29,7 @@ export default function JoinPage() {
         <ArcImages />
         <div className="flex flex-col items-center justify-center space-y-4">
           <h2 className="text-2xl font-bold">Join Our Community of Students</h2>
-          <p className="text-center w-[30rem] text-gray-400">
+          <p className="text-center w-[30rem] -400">
             Join us to get access to all the resources and support you need to
             navigate the EduWell platform.Meet students and become part of our
             thriving community.

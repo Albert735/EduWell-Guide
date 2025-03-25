@@ -36,7 +36,7 @@ const TabButton: React.FC<TabButtonProps> = ({
     className={`px-4 py-2 font-medium transition ${
       isActive
         ? "border-b-2 border-black dark:border-white dark:text-white text-black"
-        : "text-gray-600 dark:text-white hover:text-gray-500 hover:dark:text-gray-400"
+        : "-600 dark:text-white hover: hover:dark:-400"
     }`}
     onClick={() => onClick(id)}
   >

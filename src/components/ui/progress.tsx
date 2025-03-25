@@ -6,13 +6,15 @@ import { cn } from "@/lib/utils";
 
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> & { value?: number }
+  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> & {
+    value?: number;
+  }
 >(({ className, value = 0, ...props }, ref) => {
   // Determine color based on progress value
   const getProgressColor = () => {
-    if (value >= 80) return "bg-green-500"; // High progress (🟢 Green)
-    if (value >= 50) return "bg-yellow-500"; // Medium progress (🟡 Yellow)
-    return "bg-red-500"; // Low progress (🔴 Red)
+    if (value >= 80) return "bg-green"; // High progress (🟢 Green)
+    if (value >= 50) return "bg-yellow"; // Medium progress (🟡 Yellow)
+    return "bg-red"; // Low progress (🔴 Red)
   };
 
   return (

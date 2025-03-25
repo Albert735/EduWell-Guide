@@ -119,10 +119,10 @@ export default function Appointments() {
         {patientType.map((patient) => (
           <span key={patient.id}>
             <span className="flex flex-col border gap-4 rounded-lg w-[20rem]">
-              <span className="card-category text-gray-500 px-4 py-2">
+              <span className="card-category  px-4 py-2">
                 {patient.category}
               </span>
-              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-500">
+              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue">
                 {patient.number} Patient
               </span>
               <span className="card-number flex gap-2 px-4 py-2">
@@ -155,13 +155,13 @@ export default function Appointments() {
                   <TableCell className="font-medium">
                     <span>
                       <p>Today</p>
-                      <p className="text-gray-500">09:00 - 09:30 am</p>
+                      <p className="">09:00 - 09:30 am</p>
                     </span>
                   </TableCell>
                   <TableCell>
                     <span>
                       <p className="font-medium">Rosemarie Snith</p>
-                      <p className="text-gray-500">rosemarie876@outlook.com</p>
+                      <p className="">rosemarie876@outlook.com</p>
                     </span>
                   </TableCell>
                   <TableCell>
@@ -171,7 +171,7 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell className="">
                     <span>
-                      <p className="text-gray-500">Online</p>
+                      <p className="">Online</p>
                     </span>
                   </TableCell>
                   <TableCell>
@@ -242,18 +242,14 @@ export default function Appointments() {
                           />
                         </div>
                         <span className="flex flex-col gap-1">
-                          <h2 className="text-gray-400 font-sans text-[12px]">
-                            Patient name
-                          </h2>
+                          <h2 className="-400 font-sans ">Patient name</h2>
                           <p className="text-[14px] font-medium">
                             {patient.name}
                           </p>
                         </span>
                       </span>
                       <span className="flex flex-col gap-1">
-                        <h2 className="text-gray-400 font-sans text-[12px]">
-                          Date of register
-                        </h2>
+                        <h2 className="-400 font-sans ">Date of register</h2>
                         <p className="text-[14px] font-medium">
                           {patient.dateOfRegister}
                         </p>
@@ -261,17 +257,13 @@ export default function Appointments() {
                     </span>
                     <span className="flex justify-between items-center w-full">
                       <span className="flex flex-col gap-1">
-                        <h2 className="text-gray-400 font-sans text-[12px]">
-                          Phone
-                        </h2>
+                        <h2 className="-400 font-sans ">Phone</h2>
                         <p className="text-[14px] font-medium">
                           {patient.phone}
                         </p>
                       </span>
                       <span className="flex flex-col gap-1">
-                        <h2 className="text-gray-400 font-sans text-[12px]">
-                          Email
-                        </h2>
+                        <h2 className="-400 font-sans ">Email</h2>
                         <p className="text-[14px] font-medium">
                           {patient.email}
                         </p>
@@ -290,18 +282,14 @@ export default function Appointments() {
                         />
                       </div>
                       <span className="flex flex-col gap-1">
-                        <h2 className="text-gray-400 font-sans text-[12px]">
-                          Counselor name
-                        </h2>
+                        <h2 className="-400 font-sans ">Counselor name</h2>
                         <p className="text-[14px] font-medium">
                           {counselors[index].name}
                         </p>
                       </span>
                     </span>
                     <span className="flex flex-col gap-1">
-                      <h2 className="text-gray-400 font-sans text-[12px]">
-                        Appointment Schedule
-                      </h2>
+                      <h2 className="-400 font-sans ">Appointment Schedule</h2>
                       <p className="text-[14px] font-medium">
                         {counselors[index].appointmentSchedule}
                       </p>
@@ -322,7 +310,7 @@ export default function Appointments() {
             </div>
           </Tab>
           {/* <Tab id="accepted" title="Accepted">
-            <p className="text-gray-700">
+            <p className="-700">
               We are showing customer payment history here.
             </p>
           </Tab> */}
@@ -350,7 +338,7 @@ export default function Appointments() {
                   <TableCell>
                     <span>
                       <p className="font-medium">Rosemarie Snith</p>
-                      <p className="text-gray-500">rosemarie876@outlook.com</p>
+                      <p className="">rosemarie876@outlook.com</p>
                     </span>
                   </TableCell>
                   <TableCell>

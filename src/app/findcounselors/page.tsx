@@ -78,7 +78,7 @@ export default function FindcounselorsPage() {
           Your Trusted Guide to Academic <br /> & Personal Success
         </h1>
         <div className="flex flex-col items-center gap-5">
-          <p className="text-center max-w-[40rem] text-gray-500 leading-relaxed">
+          <p className="text-center max-w-[40rem]  leading-relaxed">
             Connect with experienced counselors who are ready to support your
             journey. Academic advice, mental wellness, and personal growth—just
             a click away!
@@ -96,7 +96,7 @@ export default function FindcounselorsPage() {
             ))}
           </div>
         </span>
-        <p className="text-gray-500">4.9 rating from 876+ happy students</p>
+        <p className="">4.9 rating from 876+ happy students</p>
       </div>
 
       {/* Counselor Cards */}
@@ -106,9 +106,7 @@ export default function FindcounselorsPage() {
             <Card className="flex flex-col items-center border rounded-2xl p-4">
               <CardContent className="flex flex-col gap-5">
                 <div className="flex justify-between w-full items-center">
-                  <span className="text-sm text-gray-400">
-                    {counselor.name}
-                  </span>
+                  <span className="text-sm -400">{counselor.name}</span>
                   <div className="relative w-[4rem] h-[4rem]">
                     <Image
                       src={counselor.image}
@@ -122,11 +120,11 @@ export default function FindcounselorsPage() {
                 </div>
                 <span className="flex justify-between items-center gap-2">
                   <h2 className="text-[1rem] font-medium">Role</h2>
-                  <p className="text-sm text-gray-400">{counselor.role}</p>
+                  <p className="text-sm -400">{counselor.role}</p>
                 </span>
                 <span className="flex justify-between gap-2">
                   <h2 className="text-[1rem] font-medium">Specialist</h2>
-                  <p className="text-sm text-gray-400 w-[12rem] text-balance text-right">
+                  <p className="text-sm -400 w-[12rem] text-balance text-right">
                     {counselor.description}
                   </p>
                 </span>
@@ -143,7 +141,7 @@ export default function FindcounselorsPage() {
             <GoArrowUpRight />
           </span>
 
-          <p className="text-gray-400 text-sm">
+          <p className="-400 text-sm">
             For guidance when registering via the website
           </p>
         </span>
@@ -153,7 +151,7 @@ export default function FindcounselorsPage() {
             <GoArrowUpRight />
           </span>
 
-          <p className="text-gray-400 text-sm">
+          <p className="-400 text-sm">
             For all types of services available here
           </p>
         </span>
@@ -163,7 +161,7 @@ export default function FindcounselorsPage() {
             <GoArrowUpRight />
           </span>
 
-          <p className="text-gray-400 text-sm">
+          <p className="-400 text-sm">
             Here,we will assess, create a plan of care, <br /> and consult the
             best certified counselors
           </p>
@@ -176,7 +174,7 @@ export default function FindcounselorsPage() {
           <h3 className="text-2xl font-semibold">
             Find Your Preferred Counselor
           </h3>
-          <p className="text-gray-500">
+          <p className="">
             Click on a counselor to start. Signing up is quick and free!
           </p>
         </span>

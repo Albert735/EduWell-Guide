@@ -8,7 +8,7 @@ function Footer() {
       <div className="flex flex-col xl:flex-row gap-10 justify-between items-start w-full">
         <div className="flex flex-col gap-7">
           <h1 className="text-2xl">EduWell Guide</h1>
-          <ul className="flex flex-wrap xl:flex-row gap-4 text-sm text-gray-400">
+          <ul className="flex flex-wrap xl:flex-row gap-4 text-sm -400">
             <li>Get Started</li>
             <li>Contact Us</li>
             <li>FAQ</li>
@@ -29,7 +29,7 @@ function Footer() {
             {/* <Button variant={"default"}>Subscribe</Button> */}
             <Button variant={"default"}>Subscribe</Button>
           </span>
-          <p className="text-[12px] text-gray-400">
+          <p className=" -400">
             By subscribing you agree to with our Privacy Policy
           </p>
         </div>
@@ -38,16 +38,14 @@ function Footer() {
       <hr className="h-2 w-full" />
 
       <div className="flex flex-col xl:flex-row gap-10 justify-between items-center w-full">
-        <ul className="flex gap-4 text-sm text-gray-400 underline">
+        <ul className="flex gap-4 text-sm -400 underline">
           <li>Privacy Policy</li>
           <li>Terms of Use</li>
           <li>Cookie Preferences</li>
         </ul>
 
         <span>
-          <p className="text-[12px] ">
-            © 2025 EduWell Guide. All rights reserved.
-          </p>
+          <p className=" ">© 2025 EduWell Guide. All rights reserved.</p>
         </span>
       </div>
     </div>

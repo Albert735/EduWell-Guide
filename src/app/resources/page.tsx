@@ -160,7 +160,7 @@ export default function ResourcesPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-center">
           Unlock Your Full Potential with Expert <br /> Advice & Free Resources
         </h1>
-        <p className="text-center max-w-[40rem] text-gray-500 leading-relaxed">
+        <p className="text-center max-w-[40rem]  leading-relaxed">
           Explore expert-backed guides, career tips, mental wellness strategies,
           <br />
           and study hacks—all in one place.
@@ -207,7 +207,7 @@ export default function ResourcesPage() {
                     {article.introduction && (
                       <div className="space-y-2">
                         <p className="font-medium">Introduction</p>
-                        <p className="text-gray-500 leading-relaxed">
+                        <p className=" leading-relaxed">
                           {article.introduction}
                         </p>
                       </div>
@@ -215,9 +215,7 @@ export default function ResourcesPage() {
                   </div>
                   {article.content && (
                     <div>
-                      <p className="text-gray-500 leading-relaxed">
-                        {article.content}
-                      </p>
+                      <p className=" leading-relaxed">{article.content}</p>
                     </div>
                   )}
                   {article.resources && (
@@ -227,7 +225,7 @@ export default function ResourcesPage() {
                         {article.resources.map((resources, resourceIndex) => (
                           <li
                             key={resourceIndex}
-                            className="list-disc ml-4 space-y-4 text-gray-500 leading-relaxed"
+                            className="list-disc ml-4 space-y-4  leading-relaxed"
                           >
                             <a
                               // Sets href to the resource if it's a valid URL; otherwise, disables the link.
@@ -248,9 +246,7 @@ export default function ResourcesPage() {
                   {article.conclusion && (
                     <div className="space-y-2">
                       <p className="font-medium">Conclusion</p>
-                      <p className="text-gray-500 leading-relaxed">
-                        {article.conclusion}
-                      </p>
+                      <p className=" leading-relaxed">{article.conclusion}</p>
                     </div>
                   )}
                 </li>
@@ -288,7 +284,7 @@ export default function ResourcesPage() {
           Take the Next Step Toward <br />
           Your Success!
         </h1>
-        <p className="text-center max-w-[30rem] text-gray-500 leading-relaxed flex items-start gap-2">
+        <p className="text-center max-w-[30rem]  leading-relaxed flex items-start gap-2">
           <VscQuote size={20} />
           Ready to improve your academic and personal life? <br /> Find the
           right counselor today!

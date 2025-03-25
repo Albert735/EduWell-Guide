@@ -34,7 +34,7 @@ export default function Sidebar() {
           <span className="flex justify-between items-center">
             <span>
               <h1>Eduwell Guide</h1>
-              <span className="text-[14px] text-gray-400">Expert Guidance</span>
+              <span className="text-[14px] -400">Expert Guidance</span>
             </span>
             <IoIosArrowForward size={20} />
           </span>

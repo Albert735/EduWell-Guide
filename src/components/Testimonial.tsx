@@ -9,7 +9,7 @@ function Testimonial() {
     <div className="team flex flex-col justify-center items-center max-w-screen-xl mx-auto p-4 gap-10  py-[5rem]">
       <div className="flex flex-col  justify-center items-center">
         <h1 className="text-[1.5rem] font-bold"> Student Testimonial</h1>
-        <p className="text-sm text-gray-400 text-center xl:text-start">
+        <p className="text-sm -400 text-center xl:text-start">
           EduWell Guide has transformed my academic journey!
         </p>
       </div>
@@ -42,7 +42,7 @@ function Testimonial() {
 
             <span>
               <h2 className="text-[1rem] font-bold">Alice Johnson</h2>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm -400">
                 Student, <span>University of Ghana </span>
               </p>
             </span>
@@ -78,7 +78,7 @@ function Testimonial() {
 
             <span>
               <h2 className="text-[1rem] font-bold">Wilma Smith</h2>
-              <p className="text-sm text-gray-400">Student, Academic City</p>
+              <p className="text-sm -400">Student, Academic City</p>
             </span>
           </div>
         </div>
