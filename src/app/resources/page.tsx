@@ -167,7 +167,7 @@ export default function ResourcesPage() {
         </p>
       </div>
 
-      <div className="bg-[url(/assets/blurry-gradient-haikei.png)] bg-cover bg-center bg-no-repeat rounded-xl w-full h-[10rem]"></div>
+      <div className="bg-[url(/assets/blurry-gradient-haikei.png)] bg-cover bg-center bg-no-repeat rounded-xl w-full h-[20rem]"></div>
 
       <div className="container mx-auto p-4 ">
         {/* <div>
