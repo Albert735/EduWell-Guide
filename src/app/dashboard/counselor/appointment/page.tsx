@@ -310,7 +310,7 @@ export default function Appointments() {
             </div>
           </Tab>
           {/* <Tab id="accepted" title="Accepted">
-            <p className="-700">
+            <p className="">
               We are showing customer payment history here.
             </p>
           </Tab> */}

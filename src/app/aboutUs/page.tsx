@@ -5,6 +5,7 @@ import { Marquee } from "@/components/magicui/marquee"; // Update this path to t
 import { Button } from "@/components/ui/button"; // Update this path to the correct one
 import { useEffect, useState } from "react";
 import { VscQuote } from "react-icons/vsc";
+import { GoArrowUpRight } from "react-icons/go";
 
 interface TeamImage {
   image: string;
@@ -153,10 +154,13 @@ export default function AboutUsPage() {
         </span>
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-4 space-y-10 w-full mx-auto max-w-screen-xl border px-4 py-[2rem] rounded-xl bg-gray-100 dark:bg-white/5">
+      <div className="flex flex-col justify-center items-center gap-4 space-y-10 w-full mx-auto max-w-screen-xl border px-[3rem]  py-[2rem] rounded-xl bg-gray-100 dark:bg-white/5">
         <span className="flex flex-col lg:flex-row w-full justify-between items-center gap-4">
           <div className="flex flex-col gap-4">
-            <h1 className="text-4xl md:text-5xl font-bold">Get involved</h1>
+            <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-4">
+              Get involved <GoArrowUpRight className="rotate-90" />
+            </h1>
+
             <span className="max-w-[40rem]  leading-relaxed">
               Are you a counselor or mentor looking to make an impact? <br />
               Join EduWell Guide and help shape the future of student success!{" "}
@@ -166,16 +170,15 @@ export default function AboutUsPage() {
             </Button>
           </div>
 
-          {/* <span className="flex flex-col gap-4">
-            <span>Subscribe to our newsletter</span>
-            <span className="flex gap-4">
-              <input
-                type="text"
-                className="p-2 border outline-none rounded-lg"
-              />
-              <Button variant={"default"}>Join Us</Button>
-            </span>
-          </span> */}
+          <span className="flex flex-col gap-4">
+            <Image
+              src="/assets/business-hands-joined-together-teamwork.jpg"
+              alt="Young student working on an assignment"
+              width={500}
+              height={300}
+              className="rounded-lg"
+            />
+          </span>
         </span>
       </div>
     </section>

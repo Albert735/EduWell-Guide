@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Reusable ImageCard component
 const ImageCard = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="w-[10rem] h-[18rem] md:w-[15rem] md:h-[22.5rem] relative overflow-hidden rounded-2xl hover:scale-110 transition-all ease-in-out duration-300">
+  <div className="w-[10rem] h-[18rem] md:w-[15rem] md:h-[22.5rem] relative overflow-hidden rounded-2xl  transition-all ease-in-out duration-300">
     <Image
       src={src}
       alt={alt}

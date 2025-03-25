@@ -163,25 +163,25 @@ export default function Sidebar() {
             <nav className="space-y-2">
               <Link
                 href="/dashboard"
-                className="block p-2 hover:bg-gray-700 rounded"
+                className="block p-2 hover:bg-gray rounded"
               >
                 Dashboard
               </Link>
               <Link
                 href="/bookings"
-                className="block p-2 hover:bg-gray-700 rounded"
+                className="block p-2 hover:bg-gray rounded"
               >
                 My Bookings
               </Link>
               <Link
                 href="/messages"
-                className="block p-2 hover:bg-gray-700 rounded"
+                className="block p-2 hover:bg-gray rounded"
               >
                 Messages
               </Link>
               <Link
                 href="/settings"
-                className="block p-2 hover:bg-gray-700 rounded"
+                className="block p-2 hover:bg-gray rounded"
               >
                 Settings
               </Link>

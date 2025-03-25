@@ -42,7 +42,7 @@ export default function LoginPage() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-4"
           >
-            <label htmlFor="email" className="text-sm font-medium -700">
+            <label htmlFor="email" className="text-sm font-medium ">
               Email
             </label>
             <input
@@ -56,7 +56,7 @@ export default function LoginPage() {
               <span className="text-red text-sm">{errors.email.message}</span>
             )}
 
-            <label htmlFor="password" className="text-sm font-medium -700">
+            <label htmlFor="password" className="text-sm font-medium ">
               Password
             </label>
             <input
@@ -69,7 +69,7 @@ export default function LoginPage() {
               className="p-2 border border-white/15 rounded-md w-[20rem] bg-transparent"
             />
             {errors.passwordRequired && (
-              <span className="text-red text-sm">
+              <span className="text-red-500 text-sm">
                 {errors.passwordRequired.message}
               </span>
             )}

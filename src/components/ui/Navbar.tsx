@@ -28,7 +28,7 @@ function Navbar() {
           ${
             pathname === "/findcounselors"
               ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-              : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+              : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
           }
         `}
           >
@@ -40,7 +40,7 @@ function Navbar() {
               ${
                 pathname === "/resources"
                   ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                  : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                  : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
               }
             `}
           >
@@ -53,7 +53,7 @@ function Navbar() {
             ${
               pathname === "/aboutUs"
                 ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
             }
           `}
           >
@@ -66,7 +66,7 @@ function Navbar() {
             ${
               pathname === "/support"
                 ? "dark:bg-[#121212] dark:text-white border dark:shadow-md" // Active state
-                : "-700 dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 hover:text-black" // Default + hover
+                : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
             }
           `}
           >
