@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"; // Update this path to the corr
 import { useEffect, useState } from "react";
 import { VscQuote } from "react-icons/vsc";
 import { GoArrowUpRight } from "react-icons/go";
+import Link from "next/link";
 
 interface TeamImage {
   image: string;
@@ -90,7 +91,7 @@ export default function AboutUsPage() {
 
       {/* our mission  */}
       <div className="flex flex-col  justify-center items-center gap-4 space-y-10 w-full mx-auto max-w-screen-xl">
-        <span className="flex flex-col lg:flex-row w-full justify-between items-center gap-4">
+        <span className="flex flex-col lg:flex-row w-full justify-between items-start gap-4">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
             Our Mission
           </h1>
@@ -100,7 +101,7 @@ export default function AboutUsPage() {
             counselors to guide them through academics, mental health, career
             planning, and personal growth. Our goal is to provide a seamless
             connection between students and experienced professionals who can
-            support their well-being and future success.{" "}
+            support their well-being and future success.
             <VscQuote size={20} className="inline-block rotate-180" />
           </p>
         </span>
@@ -158,16 +159,23 @@ export default function AboutUsPage() {
         <span className="flex flex-col lg:flex-row w-full justify-between items-center gap-4">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-4">
-              Get involved <GoArrowUpRight className="rotate-90" />
+              Get involved{" "}
+              <GoArrowUpRight className="rotate-90 items-end" size={24} />
             </h1>
 
-            <span className="max-w-[40rem]  leading-relaxed">
-              Are you a counselor or mentor looking to make an impact? <br />
-              Join EduWell Guide and help shape the future of student success!{" "}
+            <span className="max-w-[40rem]  leading-loose">
+              Are you a
+              <span className="bg-black px-2 py-1 rounded-3xl dark:bg-white text-white dark:text-black m-2">
+                counselor or mentor
+              </span>
+              looking to make an impact? <br />
+              Join EduWell Guide and help shape the future of student success!
             </span>
-            <Button variant={"default"} className="mt-4 w-[10rem]">
-              Join Us
-            </Button>
+            <Link href="/join">
+              <Button variant={"default"} className="mt-4 w-[10rem]">
+                Join Us
+              </Button>
+            </Link>
           </div>
 
           <span className="flex flex-col gap-4">
