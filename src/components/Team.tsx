@@ -62,42 +62,56 @@ const teamMembers: TeamMember[] = [
   {
     name: "Emma Davies",
     role: "Community Builder",
-    description:
-      "Creating a supportive environment for peer interactions and discussions.",
+    description: "Creating a supportive environment for peer interactions.",
     image: "/assets/smiling-african-american-man-looking.jpg",
   },
 ];
 
 function Team() {
   return (
-    <div className="team flex flex-col justify-center items-center max-width-screen-xl mx-auto p-4 gap-10  py-[5rem]">
+    <div className="team flex flex-col justify-center items-center max-w-screen-xl mx-auto  gap-10 xl:p-4  p-[5rem]">
       <h3>Empower</h3>
       <h1 className="text-[2rem] font-bold">Our Team</h1>
 
-      <Carousel opts={{ align: "start" }} className="max-w-screen-lg mx-auto">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true, // Enables infinite looping
+        }}
+        className="w-full max-w-screen-xl mx-auto "
+      >
         <CarouselContent>
           {teamMembers.map((member, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
-              <div className="p-1 w-[20rem]">
-                <Card className="flex flex-col items-center border rounded-2xl p-4">
-                  <div className="relative w-[5rem] h-[5rem]">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-full"
-                    />
-                  </div>
-                  <CardContent className="text-center">
-                    <div className="flex flex-col gap-3 justify-center items-center text-center">
-                      <h2 className="text-[1rem] font-bold">{member.name}</h2>
-                      <p className="text-sm -400">{member.role}</p>
-                      <p className="text-[13px]">{member.description}</p>
-                      <div className="flex gap-4">
-                        <FaXTwitter className="w-6 h-6" />
-                        <FaLinkedin className="w-6 h-6" />
-                        <FaInstagram className="w-6 h-6" />
+            <CarouselItem
+              key={index}
+              className="basis-full sm:basis-3/4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+            >
+              <div className="p-2 sm:p-3 lg:p-4">
+                <Card className="flex flex-col items-center  border rounded-2xl p-6  w-full">
+                  <CardContent className="flex flex-col justify-between  h-full items-center  p-3 w-full">
+                    <div className="relative w-20 h-20  mb-4">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-3 sm:gap-4 items-center text-center w-full">
+                      <h2 className="text-lg sm:text-xl font-bold">
+                        {member.name}
+                      </h2>
+                      <p className="text-sm sm:text-base text-gray-600">
+                        {member.role}
+                      </p>
+                      <p className="text-xs sm:text-sm text-gray-500 line-clamp-3">
+                        {member.description}
+                      </p>
+                      <div className="flex gap-4 mt-5">
+                        <FaXTwitter className="w-6 h-6 hover:text-blue-400 transition-colors" />
+                        <FaLinkedin className="w-6 h-6 hover:text-blue-600 transition-colors" />
+                        <FaInstagram className="w-6 h-6 hover:text-pink-500 transition-colors" />
                       </div>
                     </div>
                   </CardContent>

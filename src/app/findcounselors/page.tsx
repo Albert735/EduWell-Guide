@@ -90,7 +90,7 @@ export default function FindcounselorsPage() {
       <div className="flex flex-col items-center gap-2">
         <span className="flex items-center gap-2 text-lg font-medium">
           Clutch
-          <div className="flex gap-1 text-yellow-400">
+          <div className="flex gap-1 text-yellow">
             {[...Array(5)].map((_, i) => (
               <FaStar key={i} className="w-4 h-4" />
             ))}
@@ -103,10 +103,10 @@ export default function FindcounselorsPage() {
       <div className="flex max-w-screen-xl flex-wrap justify-center gap-10">
         {counselors.map((counselor, index) => (
           <div key={index} className="flex flex-col gap-5">
-            <Card className="flex flex-col items-center border rounded-2xl p-4">
+            <Card className="flex flex-col items-center border rounded-2xl p-4  w-[20rem]">
               <CardContent className="flex flex-col gap-5">
                 <div className="flex justify-between w-full items-center">
-                  <span className="text-sm -400">{counselor.name}</span>
+                  <span className="text-sm ">{counselor.name}</span>
                   <div className="relative w-[4rem] h-[4rem]">
                     <Image
                       src={counselor.image}
@@ -120,11 +120,11 @@ export default function FindcounselorsPage() {
                 </div>
                 <span className="flex justify-between items-center gap-2">
                   <h2 className="text-[1rem] font-medium">Role</h2>
-                  <p className="text-sm -400">{counselor.role}</p>
+                  <p className="text-sm ">{counselor.role}</p>
                 </span>
                 <span className="flex justify-between gap-2">
                   <h2 className="text-[1rem] font-medium">Specialist</h2>
-                  <p className="text-sm -400 w-[12rem] text-balance text-right">
+                  <p className="text-sm  w-[12rem] text-balance text-right">
                     {counselor.description}
                   </p>
                 </span>
@@ -134,14 +134,14 @@ export default function FindcounselorsPage() {
         ))}
       </div>
 
-      <div className="flex justify-between items-start gap-10 w-full">
+      <div className="flex flex-wrap justify-between items-start gap-10 w-full">
         <span className="flex flex-col gap-4">
           <span className="flex items-center gap-2">
             <h2 className="text-md font-medium">Find Counselor</h2>{" "}
             <GoArrowUpRight />
           </span>
 
-          <p className="-400 text-sm">
+          <p className=" text-sm">
             For guidance when registering via the website
           </p>
         </span>
@@ -151,9 +151,7 @@ export default function FindcounselorsPage() {
             <GoArrowUpRight />
           </span>
 
-          <p className="-400 text-sm">
-            For all types of services available here
-          </p>
+          <p className=" text-sm">For all types of services available here</p>
         </span>
         <span className="flex flex-col gap-4">
           <span className="flex items-center gap-2">
@@ -161,7 +159,7 @@ export default function FindcounselorsPage() {
             <GoArrowUpRight />
           </span>
 
-          <p className="-400 text-sm">
+          <p className=" text-sm">
             Here,we will assess, create a plan of care, <br /> and consult the
             best certified counselors
           </p>

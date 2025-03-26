@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 function Benefits() {
   return (
-    <div className=" flex  justify-center  items-center max-w-screen-xl mx-auto p-4 py-[5rem] gap-10 ">
+    <div className=" flex  justify-center  items-center max-w-screen-xl mx-auto p-5 py-[5rem] gap-10 ">
       <div className="flex flex-col xl:flex-row justify-between gap-5 w-full">
         <div className="flex flex-col gap-5 xl:w-[40rem]">
           <span className="flex items-center gap-2">
@@ -19,7 +19,7 @@ function Benefits() {
             <h1 className="text-[2rem] font-bold">
               Medium length section heading goes here
             </h1>
-            <p className="text-sm dark:-400 xl:w-[30rem]">
+            <p className=" xl:w-[30rem]">
               EduWell Guide offers a comprehensive suite of features tailored to
               meet the diverse needs of university students. From finding expert
               counselors to engaging in community discussions, we empower
@@ -30,21 +30,19 @@ function Benefits() {
           <div className="flex flex-col gap-5">
             <span className="flex items-center  gap-2">
               <IoCheckmarkDoneOutline />
-              <p className="text-sm dark:-400">
+              <p className="">
                 Browse counselors by expertise and availability.
               </p>
             </span>
             <span className="flex items-center   gap-2">
               <IoCheckmarkDoneOutline />
-              <p className="text-sm dark:-400">
+              <p className="">
                 Easily schedule sessions with your chosen counselor.
               </p>
             </span>
             <span className="flex items-center   gap-2">
               <IoCheckmarkDoneOutline />
-              <p className="text-sm dark:-400">
-                Engage in live chats and community forums.
-              </p>
+              <p className="">Engage in live chats and community forums.</p>
             </span>
           </div>
 
@@ -61,10 +59,10 @@ function Benefits() {
 
         {/* // Image */}
 
-        <div className="flex flex-wrap justify-center items-center  gap-5   p-5 rounded-lg w-full">
-          <Skeleton className="w-[20rem] h-[10rem] rounded-lg " />
+        <div className="flex flex-wrap md:grid md:grid-cols-2 justify-center items-center  gap-5 py-5 rounded-lg w-full">
+          <Skeleton className="xl:w-[20rem] w-full h-[10rem] rounded-lg " />
 
-          <div className="w-[20rem] h-[10rem] relative overflow-hidden rounded-lg">
+          <div className="xl:w-[20rem] w-full h-[10rem] relative overflow-hidden rounded-lg">
             <Image
               src="/assets/people-meeting-support-group.jpg"
               alt="Hero Image"
@@ -75,7 +73,7 @@ function Benefits() {
             />
           </div>
 
-          <div className="w-[20rem] h-[10rem] relative overflow-hidden rounded-lg">
+          <div className="xl:w-[20rem] w-full h-[10rem] relative overflow-hidden rounded-lg">
             <Image
               src="/assets/serious-students-sitting-table-library-working-with-laptop.jpg"
               alt="Hero Image"
@@ -86,7 +84,7 @@ function Benefits() {
             />
           </div>
 
-          <Skeleton className="w-[20rem] h-[10rem] rounded-lg " />
+          <Skeleton className="xl:w-[20rem] w-full h-[10rem] rounded-lg " />
         </div>
       </div>
     </div>
