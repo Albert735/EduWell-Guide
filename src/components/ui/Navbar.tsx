@@ -162,6 +162,7 @@ function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-7">
+        <ToggleTheme />
         <Link href="/join">
           <Button variant="default">Join</Button>
         </Link>
