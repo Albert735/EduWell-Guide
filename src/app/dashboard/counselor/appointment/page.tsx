@@ -122,11 +122,14 @@ export default function Appointments() {
               <span className="card-category  px-4 py-2">
                 {patient.category}
               </span>
-              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue">
+              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-300">
                 {patient.number} Patient
               </span>
               <span className="card-number flex gap-2 px-4 py-2">
-                <Badge variant={"secondary"} className="rounded-md">
+                <Badge
+                  variant={"secondary"}
+                  className="rounded-md bg-green-200"
+                >
                   +{patient.plus}
                 </Badge>
                 in this month
@@ -166,7 +169,9 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"blue"}>Member</Badge>
+                      <Badge variant={"blue"} className="bg-blue-200">
+                        Member
+                      </Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">
@@ -176,7 +181,9 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"secondary"}>Accepted</Badge>
+                      <Badge variant={"secondary"} className="bg-green-200">
+                        Accepted
+                      </Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">
@@ -203,7 +210,7 @@ export default function Appointments() {
             {/* <div className="cards flex flex-wrap justify-between items-center gap-[5rem] w-full px-2"></div> */}
           </Tab>
           <Tab id="pending" title="Pending">
-            <div className="cards flex flex-wrap justify-start items-center gap-[5rem] w-full">
+            <div className="cards flex flex-wrap justify-start items-center gap-[5rem] w-full ">
               {patients.map((patient, index) => (
                 <span
                   key={patient.id}
@@ -257,7 +264,7 @@ export default function Appointments() {
                     </span>
                     <span className="flex justify-between items-center w-full">
                       <span className="flex flex-col gap-1">
-                        <h2 className="-400 font-sans ">Phone</h2>
+                        <h2 className="bg-yellow-200-400 font-sans ">Phone</h2>
                         <p className="text-[14px] font-medium">
                           {patient.phone}
                         </p>
@@ -309,11 +316,6 @@ export default function Appointments() {
               ))}
             </div>
           </Tab>
-          {/* <Tab id="accepted" title="Accepted">
-            <p className="">
-              We are showing customer payment history here.
-            </p>
-          </Tab> */}
           <Tab id="declined" title="Declined">
             <Table className="w-full h-full   rounded-lg overflow-hidden">
               <TableCaption>Your current schedule.</TableCaption>
@@ -353,7 +355,9 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"yellow"}>Assurance</Badge>
+                      <Badge variant={"yellow"} className="bg-yellow-200">
+                        Assurance
+                      </Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">
