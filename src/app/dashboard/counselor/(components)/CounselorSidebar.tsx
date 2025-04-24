@@ -12,7 +12,6 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 import { GrCreditCard } from "react-icons/gr";
 import { IoSettingsOutline } from "react-icons/io5";
-// import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
@@ -28,8 +27,8 @@ export default function Sidebar() {
   };
 
   return (
-    <div>
-      <div className="hidden lg:flex flex-col justify-between h-full px-4 py-4 bg-white/5 border-r">
+    <div className="">
+      <div className="hidden lg:flex flex-col justify-between h-full px-4 py-4 bg-white/5 border-r ">
         <span className="flex flex-col gap-[2rem]">
           <span className="flex justify-between items-center">
             <span>
@@ -130,7 +129,7 @@ export default function Sidebar() {
 
         <span
           onClick={handleClick}
-          className={`flex relative justify-between w-full items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer ${
+          className={`flex relative justify-between w-full items-center gap-2 hover:dark:bg-white/15 hover:bg-black/5   py-2 px-2 rounded-md transition-all  duration-300 cursor-pointer  ${
             pathname === "/dashboard/counselor/appointment"
               ? "dark:bg-white/10 bg-black/10"
               : ""

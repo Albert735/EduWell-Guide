@@ -7,10 +7,10 @@ export default function counselorLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid min-h-screen w-full lg:grid-cols-[200px_1fr] ">
+    <div className="lg:grid lg:min-h-screen w-full lg:grid-cols-[230px_1fr]">
       <CounselorSidebar />
       <CounselorNavbar>
-        <main className="p-4">{children}</main>
+        <main className="p-4 ">{children}</main>
       </CounselorNavbar>
     </div>
   );
