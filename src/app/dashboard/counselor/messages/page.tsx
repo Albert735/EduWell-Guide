@@ -1,21 +1,22 @@
 "use client";
 
 import React from "react";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/components/ui/resizable";
-import { BsThreeDots } from "react-icons/bs";
-import { IoFilterOutline } from "react-icons/io5";
+// import {
+//   ResizableHandle,
+//   ResizablePanel,
+//   ResizablePanelGroup,
+// } from "@/components/ui/resizable";
+import { BsThreeDots, BsCameraVideo } from "react-icons/bs";
+import { IoFilterOutline, IoCallOutline } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
-import Image from "next/image";
-import { IoCallOutline } from "react-icons/io5";
-import { BsCameraVideo } from "react-icons/bs";
 import { LuSend } from "react-icons/lu";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
-// Defining the structure of a chat message.
 type DemoMessage = {
   id: number;
   name: string;
@@ -25,222 +26,206 @@ type DemoMessage = {
   messages?: { id: number; message: string }[];
 };
 
-// Sample data for demo messages.
 const demoMessages: DemoMessage[] = [
   {
     id: 1,
-    name: "John Doe",
-    message: "Hello, how are you?",
-    time: "2:30 PM",
-    image: "/assets/young-student-working-assignment.jpg",
+    name: "Sandra Boateng",
+    message: "Hello, I’m struggling with my academic workload. Can I get help?",
+    time: "12:20 pm",
+    image: "/assets/african-american-woman-beige-suit-portrait.jpg",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    message: "I'm doing well, thanks for asking.",
-    time: "2:35 PM",
-    image: "/assets/young-student-working-assignment.jpg",
+    name: "Kwame Asante",
+    message: "Hey, I’d like to book a session with you regarding exam prep.",
+    time: "9:45 am",
+    image: "/assets/african-american-woman-beige-suit-portrait.jpg",
   },
   {
     id: 3,
-    name: "Bob Johnson",
-    message: "I'm good, how about you?",
-    time: "2:40 PM",
-    image: "/assets/young-student-working-assignment.jpg",
-  },
-  {
-    id: 4,
-    name: "Alice Williams",
-    message: "I'm doing great, thanks for asking.",
-    time: "2:45 PM",
-    image: "/assets/young-student-working-assignment.jpg",
-  },
-  {
-    id: 5,
-    name: "Charlie Brown",
-    message: "I'm good, how about you?",
-    time: "2:50 PM",
-    image: "/assets/young-student-working-assignment.jpg",
-  },
-  {
-    id: 6,
-    name: "Emily Davis",
-    message: "I'm doing well, thanks for asking.",
-    time: "2:55 PM",
-    image: "/assets/young-student-working-assignment.jpg",
-  },
-  {
-    id: 7,
-    name: "Michael Wilson",
-    message: "I'm good, how about you?",
-    time: "3:00 PM",
-    image: "/assets/young-student-working-assignment.jpg",
+    name: "Akua Mensah",
+    message: "Hi, do you provide help with mental wellness too?",
+    time: "8:10 am",
+    image: "/assets/african-american-woman-beige-suit-portrait.jpg",
   },
 ];
 
 export default function Messages() {
-  // State to track the selected chat.
   const [selectedMessage, setSelectedMessage] =
     React.useState<DemoMessage | null>(null);
-  // State for the user's input in the message field.
   const [inputMessage, setInputMessage] = React.useState("");
+  const [inboxVisible, setInboxVisible] = React.useState(false); // for mobile toggle
 
-  // Function to handle sending a message.
   const sendMessage = () => {
-    if (inputMessage.trim() === "" || !selectedMessage) return; // Prevent sending empty messages.
-
-    setSelectedMessage((prev: DemoMessage | null) => {
-      if (!prev) return null; // If no chat is selected, do nothing.
-
+    if (inputMessage.trim() === "" || !selectedMessage) return;
+    setSelectedMessage((prev) => {
+      if (!prev) return null;
       return {
         ...prev,
         messages: [
-          ...(prev.messages || []), // Keep existing messages.
-          {
-            id: Date.now(), // Unique ID for new message.
-            message: inputMessage, // Store user input.
-          },
+          ...(prev.messages || []),
+          { id: Date.now(), message: inputMessage },
         ],
       };
     });
-    setInputMessage(""); // Clear input after sending.
+    setInputMessage("");
   };
 
   return (
-    <div className="h-[calc(100vh-5.5rem)]">
-      <ResizablePanelGroup
-        direction="horizontal"
-        className="max-w-[100vw] overflow-hidden"
+    <div className="h-[calc(100vh-5.5rem)] flex flex-col md:flex-row overflow-hidden">
+      {/* Inbox Panel */}
+      <div
+        className={`${
+          inboxVisible ? "flex" : "hidden"
+        } md:flex flex-col px-2 gap-2 bg-white/5 w-full md:w-[25%] xl:max-w-[25%] overflow-y-auto xl:border-r h-full `}
       >
-        <ResizablePanel
-          defaultSize={25}
-          minSize={20}
-          maxSize={25}
-          className="flex flex-col px-2 gap-2 bg-white/5  flex-shrink-0 w-[25%] max-w-[25%]"
-        >
-          <span className="flex justify-between items-center">
-            <h1>Chats</h1>
-            <BsThreeDots className="cursor-pointer" size={20} />
-          </span>
-          <span className="flex justify-between items-center py-2 gap-4">
-            <span className="flex justify-between items-center w-[20rem] gap-2 bg-white/10 border  px-4 py-2 rounded-md">
-              <input
-                type="text"
-                placeholder="Search"
-                className="bg-transparent outline-none w-full"
-              />
-              <FiSearch size={20} />
-            </span>
+        <span className="flex justify-between items-center">
+          <h1>Inbox</h1>
+          <BsThreeDots className="cursor-pointer" size={20} />
+        </span>
 
-            <IoFilterOutline className="cursor-pointer" size={20} />
+        <span className="flex justify-between items-center py-2 gap-4">
+          <span className="flex items-center w-full gap-2 bg-white/10 border px-4 py-2 rounded-md">
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-transparent outline-none w-full"
+            />
+            <FiSearch size={20} />
           </span>
-          <hr className="w-full" />
+          <IoFilterOutline className="cursor-pointer" size={20} />
+        </span>
 
-          {demoMessages.map((chat: DemoMessage) => (
+        <hr className="w-full" />
+
+        <ScrollArea>
+          {demoMessages.map((chat) => (
             <div
               key={chat.id}
-              className={`flex justify-between items-center gap-2 py-2 px-2 cursor-pointer rounded-md ${
+              className={`flex flex-col justify-between items-start gap-5 py-2 px-2 cursor-pointer hover:bg-gray-200 hover:dark:bg-white/10 rounded-md mb-5 ${
                 selectedMessage?.id === chat.id
                   ? "bg-white/20"
                   : "hover:bg-white/10"
               }`}
-              onClick={() => setSelectedMessage(chat)}
+              onClick={() => {
+                setSelectedMessage(chat);
+                setInboxVisible(false); // close inbox on mobile
+              }}
             >
-              <span className="flex gap-2">
-                <div className="relative w-[3rem] h-[3rem]">
-                  <Image
-                    src={chat.image}
-                    alt=""
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                </div>
-                <span className="flex flex-col justify-start items-start">
+              <span className="flex justify-start w-full gap-2">
+                <span className="flex justify-between items-start w-full">
                   <p className="font-medium">{chat.name}</p>
-                  <p className="text-sm -400">{chat.message}</p>
+                  <p className="text-xs">{chat.time}</p>
                 </span>
               </span>
-              <span className="flex flex-col items-end gap-2">
-                <p className="text-xs -400">{chat.time}</p>
-                <span className="w-[1.2rem] text-xs text-center h-[1rem] bg-blue-300 rounded-full">
-                  3
-                </span>
-              </span>
-            </div>
-          ))}
-        </ResizablePanel>
+              <p className="text-[12px] text-gray-700 dark:text-white">
+                {chat.message.slice(0, 60)}...
+              </p>
 
-        <ResizableHandle withHandle />
-
-        <ResizablePanel>
-          {selectedMessage ? (
-            <div className="flex justify-between h-full flex-col gap-2">
-              <div className="flex justify-between items-center bg-white/5 border-b">
-                <span className="flex gap-2 py-4 px-4">
-                  <div className="relative w-[3rem] h-[3rem]">
+              <div className="flex justify-between items-center w-full">
+                <span className="flex gap-2 items-center">
+                  <div className="relative w-6 h-6">
                     <Image
-                      src={selectedMessage.image}
+                      src={chat.image}
                       alt=""
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"
                     />
                   </div>
-
-                  <span className="flex flex-col justify-start items-start">
-                    <p className="font-medium">{selectedMessage.name}</p>
-                    <p className="text-sm -400">online</p>
-                  </span>
+                  <Badge variant="outline" className="text-xs">
+                    student
+                  </Badge>
                 </span>
-
-                <span className="flex gap-3 pr-4">
-                  <span className="hover:bg-white/10 p-3  rounded-md">
-                    <IoCallOutline size={24} className="cursor-pointer " />
-                  </span>
-                  <span className="hover:bg-white/10 p-3  rounded-md">
-                    <BsCameraVideo size={24} className="cursor-pointer" />
-                  </span>
-
-                  <span className="hover:bg-white/10 p-3  rounded-md">
-                    <FiSearch size={24} className="cursor-pointer" />
-                  </span>
-                </span>
+                <Badge variant="secondary" className="text-xs rounded-full">
+                  new
+                </Badge>
               </div>
+            </div>
+          ))}
+        </ScrollArea>
+      </div>
 
-              <div>
-                <div>
-                  {selectedMessage.messages?.map((message) => (
-                    <div key={message.id} className="flex gap-2 p-4">
-                      {message.message}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex gap-4 rounded-lg px-3">
-                  <input
-                    className="w-full py-2 px-3 h-12 rounded-lg outline-none"
-                    type="text"
-                    placeholder="Type a message..."
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
+      {/* Chat Panel */}
+      <div className="flex flex-col flex-grow w-full md:w-[75%] ">
+        {selectedMessage ? (
+          <>
+            {/* Header */}
+            <div className="flex justify-between items-center bg-white/5 border-b lg:px-4 py-2">
+              <span className="flex items-center gap-4  p-2">
+                <span   onClick={() => setSelectedMessage(null)} className="cursor-pointer">
+                  <IoMdArrowRoundBack size={22} />
+                </span>
+                <div className="relative w-6 h-6">
+                  <Image
+                    src={selectedMessage.image}
+                    alt=""
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-full"
                   />
-                  <Button
-                    variant={"default"}
-                    onClick={sendMessage}
-                    className="flex h-11"
-                  >
-                    <LuSend />
-                  </Button>
                 </div>
-              </div>
+                <p className="font-medium">{selectedMessage.name}</p>
+              </span>
+
+              <span className="flex gap-3">
+                <IoCallOutline
+                  size={22}
+                  className="cursor-pointer hover:opacity-80"
+                />
+                <BsCameraVideo
+                  size={22}
+                  className="cursor-pointer hover:opacity-80"
+                />
+                <FiSearch
+                  size={22}
+                  className="cursor-pointer hover:opacity-80"
+                />
+              </span>
             </div>
-          ) : (
-            <div className="flex items-center justify-center h-full -400">
-              Select a chat to start messaging
+
+            {/* Messages */}
+            <div className="flex-grow overflow-y-auto px-4 py-3 space-y-2">
+              {selectedMessage.messages?.map((message) => (
+                <div key={message.id} className="flex justify-end">
+                  <div className="bg-blue-500 text-white rounded-xl p-2 max-w-[80%] text-sm">
+                    {message.message}
+                  </div>
+                </div>
+              ))}
             </div>
-          )}
-        </ResizablePanel>
-      </ResizablePanelGroup>
+
+            {/* Input */}
+            <div className="flex gap-2 px-4 py-3 border-t">
+              <input
+                className="flex-grow py-2 px-3 h-12 rounded-lg outline-none text-sm"
+                type="text"
+                placeholder="Type a message..."
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+              />
+              <Button
+                variant="default"
+                onClick={sendMessage}
+                className="h-11 min-w-[3rem] px-3"
+              >
+                <LuSend />
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div
+            className={`${
+              inboxVisible && "hidden"
+            } flex flex-col items-center justify-center h-full text-center gap-3`}
+          >
+            <p className="text-lg">Select a chat to start messaging</p>
+            <Button className="md:hidden" onClick={() => setInboxVisible(true)}>
+              Open Inbox
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
