@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { useRouter } from "next/navigation";
+
 
 type DemoMessage = {
   id: number;
