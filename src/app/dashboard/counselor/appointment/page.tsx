@@ -114,18 +114,23 @@ export default function Appointments() {
 
   return (
     <div className="space-y-5">
-      <div className="header">Approval New Client</div>
-      <div className="cards flex justify-start items-center gap-[3rem] w-full">
+      <div className="header">
+        <h1 className="text-2xl font-bold">Appointments</h1>
+        <p className="text-sm text-gray-500">
+          Manage your appointments and patient requests.
+        </p>
+      </div>
+      <div className="cards flex flex-row flex-wrap justify-between md:justify-start items-center gap-4 md:gap-[3rem] w-full px-2 ">
         {patientType.map((patient) => (
-          <span key={patient.id}>
-            <span className="flex flex-col border gap-4 rounded-lg w-[20rem]">
-              <span className="card-category  px-4 py-2">
+          <span key={patient.id} className="">
+            <span className="flex flex-col border gap-4 rounded-lg w-[10rem] md:w-[20rem] ">
+              <span className="card-category px-3 py-2 text-[12px]">
                 {patient.category}
               </span>
-              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-500">
+              <span className="card-number font-medium px-4 md:text-[1.5rem] border-l-4 w-full border-l-blue-500">
                 {patient.number} Patient
               </span>
-              <span className="card-number flex gap-2 px-4 py-2">
+              <span className="card-number flex gap-2 px-4 py-2 text-[12px] ">
                 <Badge variant={"secondary"} className="rounded-md">
                   +{patient.plus}
                 </Badge>
@@ -138,7 +143,7 @@ export default function Appointments() {
       <div className="tabs">
         <Tabs>
           <Tab id="upcoming" title="Upcoming">
-            <Table className="w-full h-full   rounded-lg overflow-hidden">
+            <Table className="w-full h-full rounded-lg overflow-hidden">
               <TableCaption>Your current schedule.</TableCaption>
               <TableHeader>
                 <TableRow>
@@ -154,21 +159,19 @@ export default function Appointments() {
                 <TableRow>
                   <TableCell className="font-medium">
                     <span>
-                      <p>Today</p>
-                      <p className="">09:00 - 09:30 am</p>
+                      <p className="text-[14px]">Today</p>
+                      <p className="text-[12px]">09:00 - 09:30 am</p>
                     </span>
                   </TableCell>
                   <TableCell>
                     <span>
-                      <p className="font-medium">Rosemarie Snith</p>
+                      <p className="text-[14px] font-medium">Rosemarie Smith</p>
                       <p className="">rosemarie876@outlook.com</p>
                     </span>
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"blue"} className="bg-blue-200">
-                        Member
-                      </Badge>
+                      <Badge variant={"blue"}>Member</Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">
@@ -178,9 +181,7 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"secondary"} className="bg-green-200">
-                        Accepted
-                      </Badge>
+                      <Badge variant={"secondary"}>Accepted</Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">
@@ -204,21 +205,20 @@ export default function Appointments() {
                 </TableRow>
               </TableBody>
             </Table>
-            {/* <div className="cards flex flex-wrap justify-between items-center gap-[5rem] w-full px-2"></div> */}
           </Tab>
           <Tab id="pending" title="Pending">
             <div className="cards flex flex-wrap justify-start items-center gap-[5rem] w-full ">
               {patients.map((patient, index) => (
                 <span
                   key={patient.id}
-                  className="flex flex-col border w-[25rem] px-4 py-2 rounded-lg gap-10"
+                  className="flex flex-col border w-[21.5rem] md:w-[25rem] px-4 py-2 rounded-lg gap-10"
                 >
                   <span className="flex justify-between items-center border-b py-2">
                     <span className="flex gap-2 items-center">
                       <span className="border rounded-full p-1">
                         <RiMentalHealthLine size={20} />
                       </span>
-                      <span>{patient.id}</span>
+                      <span className="text-[12px]">{patient.id}</span>
                     </span>
                     <Badge
                       variant={
@@ -228,7 +228,7 @@ export default function Appointments() {
                           ? "yellow"
                           : "blue"
                       }
-                      className="rounded-md"
+                      className="rounded-md text-[12px] "
                     >
                       {patient.subsciption}
                     </Badge>
@@ -246,31 +246,27 @@ export default function Appointments() {
                           />
                         </div>
                         <span className="flex flex-col gap-1">
-                          <h2 className="-400 font-sans ">Patient name</h2>
-                          <p className="text-[14px] font-medium">
-                            {patient.name}
-                          </p>
+                          <h2 className="text-[14px] font-sans ">
+                            Patient name
+                          </h2>
+                          <p className="text-[14px]">{patient.name}</p>
                         </span>
                       </span>
                       <span className="flex flex-col gap-1">
-                        <h2 className="-400 font-sans ">Date of register</h2>
-                        <p className="text-[14px] font-medium">
-                          {patient.dateOfRegister}
-                        </p>
+                        <h2 className="text-[14px] font-sans ">
+                          Date of register
+                        </h2>
+                        <p className="text-[14px] ">{patient.dateOfRegister}</p>
                       </span>
                     </span>
                     <span className="flex justify-between items-center w-full">
                       <span className="flex flex-col gap-1">
-                        <h2 className="bg-yellow-200-400 font-sans ">Phone</h2>
-                        <p className="text-[14px] font-medium">
-                          {patient.phone}
-                        </p>
+                        <h2 className=" font-sans ">Phone</h2>
+                        <p className="text-[12px] ">{patient.phone}</p>
                       </span>
                       <span className="flex flex-col gap-1">
-                        <h2 className="-400 font-sans ">Email</h2>
-                        <p className="text-[14px] font-medium">
-                          {patient.email}
-                        </p>
+                        <h2 className="text-[14px] font-sans ">Email</h2>
+                        <p className="text-[12px] ">{patient.email}</p>
                       </span>
                     </span>
                   </span>
@@ -286,15 +282,17 @@ export default function Appointments() {
                         />
                       </div>
                       <span className="flex flex-col gap-1">
-                        <h2 className="-400 font-sans ">Counselor name</h2>
-                        <p className="text-[14px] font-medium">
-                          {counselors[index].name}
-                        </p>
+                        <h2 className="text-[14px] font-sans ">
+                          Counselor name
+                        </h2>
+                        <p className="text-[12px] ">{counselors[index].name}</p>
                       </span>
                     </span>
                     <span className="flex flex-col gap-1">
-                      <h2 className="-400 font-sans ">Appointment Schedule</h2>
-                      <p className="text-[14px] font-medium">
+                      <h2 className="text-[14px] font-sans ">
+                        Appointment Schedule
+                      </h2>
+                      <p className="text-[12px] ">
                         {counselors[index].appointmentSchedule}
                       </p>
                     </span>

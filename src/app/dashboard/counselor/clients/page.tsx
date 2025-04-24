@@ -113,48 +113,64 @@ const demoClients = [
 export default function Clients() {
   return (
     <div className="flex flex-col p-4 gap-4">
-      <span className="">
+      {/* Filter Input */}
+      <div className="w-full max-w-md">
         <input
           type="text"
           placeholder="Filter clients..."
-          className="w-[25rem] h-11 outline-none p-4 rounded-md bg-transparent border"
+          className="w-full h-11 px-4 border rounded-md bg-transparent outline-none text-sm sm:text-base"
         />
-      </span>
+      </div>
 
-      <Table className="w-full   rounded-lg overflow-hidden">
-        <TableCaption>A list of your recent clients.</TableCaption>
-        <TableHeader>
-          <TableRow className="">
-            <TableHead className="w-[17rem] py-3 text-left">Email</TableHead>
-            <TableHead className="py-3 text-left">Visits</TableHead>
-            <TableHead className="py-3 text-left">Phone</TableHead>
-            <TableHead className="py-3 text-center">Progress</TableHead>
-            <TableHead className="py-3 text-center">Status</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {demoClients.map((client) => (
-            <TableRow key={client.id} className="">
-              <TableCell className="font-medium">{client.email}</TableCell>
-              <TableCell>{client.visits}</TableCell>
-              <TableCell>{client.phone}</TableCell>
-              <TableCell className="flex items-center space-x-2">
-                <Progress value={client.progress} />
-                <span>{client.progress}%</span>
-              </TableCell>
-              <TableCell className="text-center">
-                <Badge
-                  variant={
-                    client.status === "Completed" ? "secondary" : "outline"
-                  }
-                >
-                  {client.status}
-                </Badge>
-              </TableCell>
+      {/* Responsive Table */}
+      <div className="w-full overflow-x-auto">
+        <Table className="min-w-[800px] w-full rounded-lg overflow-hidden">
+          <TableCaption>A list of your recent clients.</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="min-w-[240px] text-left py-3">
+                Email
+              </TableHead>
+              <TableHead className="text-left py-3">Visits</TableHead>
+              <TableHead className="text-left py-3">Phone</TableHead>
+              <TableHead className="text-center py-3">Progress</TableHead>
+              <TableHead className="text-center py-3">Status</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {demoClients.map((client) => (
+              <TableRow key={client.id}>
+                <TableCell className="font-medium text-sm sm:text-base">
+                  {client.email}
+                </TableCell>
+                <TableCell className="text-sm sm:text-base">
+                  {client.visits}
+                </TableCell>
+                <TableCell className="text-sm sm:text-base">
+                  {client.phone}
+                </TableCell>
+                <TableCell className="text-sm sm:text-base">
+                  <div className="flex items-center gap-2">
+                    <Progress value={client.progress} />
+                    <span className="whitespace-nowrap">
+                      {client.progress}%
+                    </span>
+                  </div>
+                </TableCell>
+                <TableCell className="text-center">
+                  <Badge
+                    variant={
+                      client.status === "Completed" ? "secondary" : "outline"
+                    }
+                  >
+                    {client.status}
+                  </Badge>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     </div>
   );
 }

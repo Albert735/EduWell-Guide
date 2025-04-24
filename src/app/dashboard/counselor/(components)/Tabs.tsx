@@ -88,7 +88,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
 
       {/* Tab Content */}
 
-      <div className="mt-4 p-4 border rounded-lg h-[calc(70vh-5rem)]">
+      <div className="mt-4 p-4  rounded-lg h-[calc(70vh-5rem)]">
         <ScrollArea className="h-full w-full">
           {
             (
