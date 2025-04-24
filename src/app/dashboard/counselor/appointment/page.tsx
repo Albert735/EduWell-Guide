@@ -122,14 +122,11 @@ export default function Appointments() {
               <span className="card-category  px-4 py-2">
                 {patient.category}
               </span>
-              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-300">
+              <span className="card-number font-medium px-4 text-[1.5rem] border-l-4 w-full border-l-blue-500">
                 {patient.number} Patient
               </span>
               <span className="card-number flex gap-2 px-4 py-2">
-                <Badge
-                  variant={"secondary"}
-                  className="rounded-md bg-green-200"
-                >
+                <Badge variant={"secondary"} className="rounded-md">
                   +{patient.plus}
                 </Badge>
                 in this month
@@ -355,9 +352,7 @@ export default function Appointments() {
                   </TableCell>
                   <TableCell>
                     <span>
-                      <Badge variant={"yellow"} className="bg-yellow-200">
-                        Assurance
-                      </Badge>
+                      <Badge variant={"yellow"}>Assurance</Badge>
                     </span>
                   </TableCell>
                   <TableCell className="">

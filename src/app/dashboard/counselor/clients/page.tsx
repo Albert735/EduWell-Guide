@@ -113,10 +113,6 @@ const demoClients = [
 export default function Clients() {
   return (
     <div className="flex flex-col p-4 gap-4">
-      {/* <span className="px-2">
-        <h1 className="text-lg font-semibold">Clients</h1>
-      </span> */}
-
       <span className="">
         <input
           type="text"
