@@ -103,8 +103,8 @@ export default function FindcounselorsPage() {
       <div className="flex max-w-screen-xl flex-wrap justify-center gap-10">
         {counselors.map((counselor, index) => (
           <div key={index} className="flex flex-col gap-5">
-            <Card className="flex flex-col items-center border rounded-2xl p-4  w-[20rem]">
-              <CardContent className="flex flex-col gap-5">
+            <Card className="flex flex-col items-center border border-[#2860a1] rounded-2xl p-4  w-[20rem] bg-[#f3f6fc]  transition-transform duration-300 hover:scale-105">
+              <CardContent className="flex flex-col gap-5  ">
                 <div className="flex justify-between w-full items-center">
                   <span className="text-sm ">{counselor.name}</span>
                   <div className="relative w-[4rem] h-[4rem]">

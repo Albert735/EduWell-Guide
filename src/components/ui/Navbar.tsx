@@ -33,11 +33,11 @@ function Navbar() {
         <ul className="flex gap-7">
           <Link
             href="/findcounselors"
-            className={`px-4 py-2 rounded-lg transition-all duration-300
+            className={`px-3 py-2 rounded-lg transition-all duration-300
           ${
             pathname === "/findcounselors"
-              ? "dark:bg-[#121212] dark:text-white bg-gray-100 border dark:shadow-md" // Active state
-              : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
+              ? "bg-[#5d97d3] dark:text-black  border dark:shadow-md" // Active state
+              : "  hover:text-black hover:bg-[#96bae3]" // Default + hover
           }
         `}
           >
@@ -45,11 +45,11 @@ function Navbar() {
           </Link>
           <Link
             href="/resources"
-            className={`px-4 py-2 rounded-lg transition-all duration-300
+            className={`px-3 py-2 rounded-lg transition-all duration-300
               ${
                 pathname === "/resources"
-                  ? "dark:bg-[#121212] dark:text-white bg-gray-100 border dark:shadow-md" // Active state
-                  : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
+                  ? "bg-[#5d97d3]  dark:text-black  border dark:shadow-md" // Active state
+                  : " hover:text-black hover:bg-[#96bae3]" // Default + hover
               }
             `}
           >
@@ -58,11 +58,11 @@ function Navbar() {
 
           <Link
             href="/aboutUs"
-            className={`px-4 py-2 rounded-lg transition-all duration-300
+            className={`px-3 py-2 rounded-lg transition-all duration-300
             ${
               pathname === "/aboutUs"
-                ? "dark:bg-[#121212] dark:text-white bg-gray-100 border dark:shadow-md" // Active state
-                : " dark:-300 hover:dark:bg-[#171717] hover:bg-gray-100 " // Default + hover
+                ? "bg-[#5d97d3] dark:text-black  border dark:shadow-md" // Active state
+                : " hover:text-black hover:bg-[#96bae3]" // Default + hover
             }
           `}
           >
@@ -164,7 +164,12 @@ function Navbar() {
       <div className="hidden md:flex items-center gap-7">
         <ToggleTheme />
         <Link href="/join">
-          <Button variant="default">Join</Button>
+          <Button
+            variant="default"
+            className="bg-[#c7daf0] text-black hover:bg-[#96bae3] transition-all duration-300 hover:scale-105"
+          >
+            Join
+          </Button>
         </Link>
       </div>
     </div>

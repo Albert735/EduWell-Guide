@@ -59,9 +59,19 @@ function Hero() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/join">
-            <Button variant="default">Get Started</Button>
+            <Button
+              variant="default"
+              className="bg-[#c7daf0] text-[#1e1e2f] hover:bg-[#96bae3]  transition-all duration-300 hover:scale-105"
+            >
+              Get Started
+            </Button>
           </Link>
-          <Button variant="outline">Learn More</Button>
+          <Button
+            variant="outline"
+            className=" hover:bg-[#96bae3] hover:text-[#1e1e2f]  transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </Button>
         </div>
       </div>
 
