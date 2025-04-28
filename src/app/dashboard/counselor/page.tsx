@@ -1,5 +1,6 @@
 import AppointRequest from "./(components)/AppointRequest";
 import Overview from "./(components)/Overview";
+import PatientOverview from "./(components)/PatientOverview";
 
 export default function counselorDashboard() {
   return (
@@ -8,7 +9,9 @@ export default function counselorDashboard() {
         <Overview />
       </div>
       <div className="col-span-2 row-span-2 col-start-3 bg-lime-300">2</div>
-      <div className="col-span-3 row-span-3 row-start-3 bg-green-300">3</div>
+      <div className="col-span-3 row-span-3 row-start-3 ">
+        <PatientOverview />
+      </div>
       <div className="row-span-3 col-start-4 row-start-3 overflow-auto">
         <AppointRequest />
       </div>
