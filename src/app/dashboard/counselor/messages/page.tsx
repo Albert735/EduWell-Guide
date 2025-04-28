@@ -1,11 +1,6 @@
 "use client";
 
 import React from "react";
-// import {
-//   ResizableHandle,
-//   ResizablePanel,
-//   ResizablePanelGroup,
-// } from "@/components/ui/resizable";
 import { BsThreeDots, BsCameraVideo } from "react-icons/bs";
 import { IoFilterOutline, IoCallOutline } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
@@ -15,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { IoMdArrowRoundBack } from "react-icons/io";
-
 
 type DemoMessage = {
   id: number;
@@ -54,7 +48,7 @@ export default function Messages() {
   const [selectedMessage, setSelectedMessage] =
     React.useState<DemoMessage | null>(null);
   const [inputMessage, setInputMessage] = React.useState("");
-  const [inboxVisible, setInboxVisible] = React.useState(false); // for mobile toggle
+  const [inboxVisible, setInboxVisible] = React.useState(true); // Ensure inbox is visible by default on mobile
 
   const sendMessage = () => {
     if (inputMessage.trim() === "" || !selectedMessage) return;
@@ -153,7 +147,13 @@ export default function Messages() {
             {/* Header */}
             <div className="flex justify-between items-center bg-white/5 border-b lg:px-4 py-2">
               <span className="flex items-center gap-4  p-2">
-                <span   onClick={() => setSelectedMessage(null)} className="cursor-pointer">
+                <span
+                  onClick={() => {
+                    setSelectedMessage(null);
+                    setInboxVisible(true); // open inbox on mobile
+                  }}
+                  className="cursor-pointer md:hidden"
+                >
                   <IoMdArrowRoundBack size={22} />
                 </span>
                 <div className="relative w-6 h-6">
