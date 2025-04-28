@@ -102,6 +102,7 @@ export default function Messages() {
         <hr className="w-full" />
 
         <ScrollArea>
+          {/* List of messages */}
           {demoMessages.map((chat) => (
             <div
               key={chat.id}
@@ -111,8 +112,8 @@ export default function Messages() {
                   : "hover:bg-white/10"
               }`}
               onClick={() => {
-                setSelectedMessage(chat);
-                setInboxVisible(false);
+                setSelectedMessage(chat); // Set this chat as active
+                setInboxVisible(false); // Hide the inbox on mobile
               }}
             >
               <span className="flex justify-start w-full gap-2">
@@ -152,6 +153,7 @@ export default function Messages() {
       <div className="flex flex-col flex-grow w-full md:w-[75%]">
         {selectedMessage ? (
           <>
+            {/* Chat header with back button, profile, and actions */}
             {/* Header */}
             <div className="flex justify-between items-center bg-white/5 border-b lg:px-4 py-2">
               <span className="flex items-center gap-4 p-2">
@@ -164,6 +166,8 @@ export default function Messages() {
                 >
                   <IoMdArrowRoundBack size={22} />
                 </button>
+
+                {/* Profile picture and name */}
                 <div className="relative w-8 h-8 rounded-full overflow-hidden">
                   <Image
                     src={selectedMessage.image}
@@ -174,7 +178,7 @@ export default function Messages() {
                 </div>
                 <p className="font-medium">{selectedMessage.name}</p>
               </span>
-
+              {/* Call/video/search actions */}
               <span className="flex gap-3">
                 <IoCallOutline
                   size={22}
@@ -201,7 +205,7 @@ export default function Messages() {
                   </div>
                 </div>
 
-                {/* Subsequent messages */}
+                {/* Conversation messages */}
                 {selectedMessage.messages?.map((message) => (
                   <div
                     key={message.id}
@@ -209,11 +213,12 @@ export default function Messages() {
                       message.id % 2 === 0 ? "justify-start" : "justify-end"
                     }`}
                   >
+                    {/* Message bubble with alternating colors */}
                     <div
                       className={`rounded-xl p-2 max-w-[80%] text-sm ${
                         message.id % 2 === 0
-                          ? "bg-gray-200 dark:bg-white/10"
-                          : "bg-blue-500 text-white"
+                          ? "bg-gray-200 dark:bg-white/10" // Received messages
+                          : "bg-blue-500 text-white" // Sent messages
                       }`}
                     >
                       {message.message}
@@ -223,6 +228,7 @@ export default function Messages() {
               </div>
             </ScrollArea>
 
+            {/* Message input area */}
             {/* Input */}
             <div className="flex gap-2 px-4 py-3 border-t">
               <input
@@ -243,12 +249,14 @@ export default function Messages() {
             </div>
           </>
         ) : (
+          /* ===== WHEN NO CHAT IS SELECTED ===== */
           <div
             className={`${
               !inboxVisible ? "flex" : "hidden"
             } md:flex flex-col items-center justify-center h-full text-center gap-3`}
           >
             <p className="text-lg">Select a chat to start messaging</p>
+            {/* Button to show inbox on mobile */}
             <Button className="md:hidden" onClick={() => setInboxVisible(true)}>
               Open Inbox
             </Button>
