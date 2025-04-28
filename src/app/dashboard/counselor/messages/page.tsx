@@ -11,27 +11,36 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
+type Message = {
+  id: number;
+  message: string;
+};
+
 type DemoMessage = {
   id: number;
   name: string;
   message: string;
   time: string;
   image: string;
-  messages?: { id: number; message: string }[];
+  messages?: Message[];
 };
 
 const demoMessages: DemoMessage[] = [
   {
     id: 1,
     name: "Sandra Boateng",
-    message: "Hello, I’m struggling with my academic workload. Can I get help?",
+    message: "Hello, I'm struggling with my academic workload. Can I get help?",
     time: "12:20 pm",
     image: "/assets/african-american-woman-beige-suit-portrait.jpg",
+    messages: [
+      { id: 1, message: "Hello, I need help with my studies" },
+      { id: 2, message: "What specific areas do you need help with?" },
+    ],
   },
   {
     id: 2,
     name: "Kwame Asante",
-    message: "Hey, I’d like to book a session with you regarding exam prep.",
+    message: "Hey, I'd like to book a session with you regarding exam prep.",
     time: "9:45 am",
     image: "/assets/african-american-woman-beige-suit-portrait.jpg",
   },
@@ -48,20 +57,20 @@ export default function Messages() {
   const [selectedMessage, setSelectedMessage] =
     React.useState<DemoMessage | null>(null);
   const [inputMessage, setInputMessage] = React.useState("");
-  const [inboxVisible, setInboxVisible] = React.useState(true); // Ensure inbox is visible by default on mobile
+  const [inboxVisible, setInboxVisible] = React.useState(true);
 
   const sendMessage = () => {
     if (inputMessage.trim() === "" || !selectedMessage) return;
-    setSelectedMessage((prev) => {
-      if (!prev) return null;
-      return {
-        ...prev,
-        messages: [
-          ...(prev.messages || []),
-          { id: Date.now(), message: inputMessage },
-        ],
-      };
-    });
+
+    const updatedMessage = {
+      ...selectedMessage,
+      messages: [
+        ...(selectedMessage.messages || []),
+        { id: Date.now(), message: inputMessage },
+      ],
+    };
+
+    setSelectedMessage(updatedMessage);
     setInputMessage("");
   };
 
@@ -71,7 +80,7 @@ export default function Messages() {
       <div
         className={`${
           inboxVisible ? "flex" : "hidden"
-        } md:flex flex-col px-2 gap-2 bg-white/5 w-full md:w-[25%] xl:max-w-[25%] overflow-y-auto xl:border-r h-full `}
+        } md:flex flex-col px-2 gap-2 bg-white/5 w-full md:w-[25%] xl:max-w-[25%] overflow-y-auto xl:border-r h-full`}
       >
         <span className="flex justify-between items-center">
           <h1>Inbox</h1>
@@ -103,7 +112,7 @@ export default function Messages() {
               }`}
               onClick={() => {
                 setSelectedMessage(chat);
-                setInboxVisible(false); // close inbox on mobile
+                setInboxVisible(false);
               }}
             >
               <span className="flex justify-start w-full gap-2">
@@ -118,13 +127,12 @@ export default function Messages() {
 
               <div className="flex justify-between items-center w-full">
                 <span className="flex gap-2 items-center">
-                  <div className="relative w-6 h-6">
+                  <div className="relative w-6 h-6 rounded-full overflow-hidden">
                     <Image
                       src={chat.image}
-                      alt=""
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-full"
+                      alt={`${chat.name}'s profile`}
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <Badge variant="outline" className="text-xs">
@@ -141,28 +149,27 @@ export default function Messages() {
       </div>
 
       {/* Chat Panel */}
-      <div className="flex flex-col flex-grow w-full md:w-[75%] ">
+      <div className="flex flex-col flex-grow w-full md:w-[75%]">
         {selectedMessage ? (
           <>
             {/* Header */}
             <div className="flex justify-between items-center bg-white/5 border-b lg:px-4 py-2">
-              <span className="flex items-center gap-4  p-2">
-                <span
+              <span className="flex items-center gap-4 p-2">
+                <button
                   onClick={() => {
                     setSelectedMessage(null);
-                    setInboxVisible(true); // open inbox on mobile
+                    setInboxVisible(true);
                   }}
                   className="cursor-pointer md:hidden"
                 >
                   <IoMdArrowRoundBack size={22} />
-                </span>
-                <div className="relative w-6 h-6">
+                </button>
+                <div className="relative w-8 h-8 rounded-full overflow-hidden">
                   <Image
                     src={selectedMessage.image}
-                    alt=""
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
+                    alt={`${selectedMessage.name}'s profile`}
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <p className="font-medium">{selectedMessage.name}</p>
@@ -185,24 +192,46 @@ export default function Messages() {
             </div>
 
             {/* Messages */}
-            <div className="flex-grow overflow-y-auto px-4 py-3 space-y-2">
-              {selectedMessage.messages?.map((message) => (
-                <div key={message.id} className="flex justify-end">
-                  <div className="bg-blue-500 text-white rounded-xl p-2 max-w-[80%] text-sm">
-                    {message.message}
+            <ScrollArea className="flex-grow px-4 py-3">
+              <div className="space-y-2">
+                {/* Initial message from the contact */}
+                <div className="flex justify-start">
+                  <div className="bg-gray-200 dark:bg-white/10 rounded-xl p-2 max-w-[80%] text-sm">
+                    {selectedMessage.message}
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Subsequent messages */}
+                {selectedMessage.messages?.map((message) => (
+                  <div
+                    key={message.id}
+                    className={`flex ${
+                      message.id % 2 === 0 ? "justify-start" : "justify-end"
+                    }`}
+                  >
+                    <div
+                      className={`rounded-xl p-2 max-w-[80%] text-sm ${
+                        message.id % 2 === 0
+                          ? "bg-gray-200 dark:bg-white/10"
+                          : "bg-blue-500 text-white"
+                      }`}
+                    >
+                      {message.message}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollArea>
 
             {/* Input */}
             <div className="flex gap-2 px-4 py-3 border-t">
               <input
-                className="flex-grow py-2 px-3 h-12 rounded-lg outline-none text-sm"
+                className="flex-grow py-2 px-3 h-12 rounded-lg outline-none text-sm bg-transparent border"
                 type="text"
                 placeholder="Type a message..."
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
+                onKeyPress={(e) => e.key === "Enter" && sendMessage()}
               />
               <Button
                 variant="default"
@@ -216,8 +245,8 @@ export default function Messages() {
         ) : (
           <div
             className={`${
-              inboxVisible && "hidden"
-            } flex flex-col items-center justify-center h-full text-center gap-3`}
+              !inboxVisible ? "flex" : "hidden"
+            } md:flex flex-col items-center justify-center h-full text-center gap-3`}
           >
             <p className="text-lg">Select a chat to start messaging</p>
             <Button className="md:hidden" onClick={() => setInboxVisible(true)}>
