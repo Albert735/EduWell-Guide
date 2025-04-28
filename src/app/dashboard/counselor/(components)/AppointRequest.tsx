@@ -7,7 +7,7 @@ interface AppointRequestProps {
   name: string;
   date: string;
   time: string;
-  status: "Pending" | "Confirmed" | "Cancelled";
+  status: "member" | "assurance" | "regular";
 }
 
 const appointmentData: AppointRequestProps[] = [
@@ -15,37 +15,37 @@ const appointmentData: AppointRequestProps[] = [
     name: "John Doe",
     date: "2023-10-01",
     time: "10:00 AM",
-    status: "Pending",
+    status: "member",
   },
   {
     name: "Jane Smith",
     date: "2023-10-02",
     time: "11:00 AM",
-    status: "Confirmed",
+    status: "assurance",
   },
   {
     name: "Alice Johnson",
     date: "2023-10-03",
     time: "12:00 PM",
-    status: "Cancelled",
+    status: "regular",
   },
   {
     name: "Bob Brown",
     date: "2023-10-04",
     time: "01:00 PM",
-    status: "Pending",
+    status: "member",
   },
   {
     name: "Charlie Davis",
     date: "2023-10-05",
     time: "02:00 PM",
-    status: "Confirmed",
+    status: "assurance",
   },
   {
     name: "Diana Evans",
     date: "2023-10-06",
     time: "03:00 PM",
-    status: "Cancelled",
+    status: "regular",
   },
 ];
 
@@ -78,11 +78,11 @@ export default function AppointRequest() {
                 </p>
                 <Badge
                   variant={
-                    appointment.status === "Pending"
+                    appointment.status === "member"
                       ? "blue"
-                      : appointment.status === "Confirmed"
-                      ? "secondary"
-                      : "destructive"
+                      : appointment.status === "assurance"
+                      ? "yellow"
+                      : "secondary"
                   }
                 >
                   {appointment.status}
@@ -90,7 +90,10 @@ export default function AppointRequest() {
               </div>
               {/* button */}
               <div className="flex  gap-2 w-full">
-                <Button variant={"destructive"} className="w-full text-red-600">
+                <Button
+                  variant={"destructive"}
+                  className="w-full text-red-600 dark:bg-red-200"
+                >
                   Reject
                 </Button>
                 <Button variant="secondary" className="w-full text-green-600">

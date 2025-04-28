@@ -4,7 +4,7 @@ import PatientOverview from "./(components)/PatientOverview";
 
 export default function counselorDashboard() {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-5 gap-4 lg:h-[calc(100vh-5.5rem)] h-screen  p-2">
+    <div className="flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-5 gap-5 lg:h-[calc(100vh-5.5rem)] h-screen  p-2">
       <div className="col-span-2 row-span-2 ">
         <Overview />
       </div>
