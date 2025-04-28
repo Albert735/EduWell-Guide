@@ -7,7 +7,7 @@ interface AppointRequestProps {
   name: string;
   date: string;
   time: string;
-  status: string;
+  status: "Pending" | "Confirmed" | "Cancelled";
 }
 
 const appointmentData: AppointRequestProps[] = [
@@ -76,20 +76,24 @@ export default function AppointRequest() {
                 <p className="text-sm text-gray-500">
                   {appointment.date} - {appointment.time}
                 </p>
-                <Badge>{appointment.status}</Badge>
+                <Badge
+                  variant={
+                    appointment.status === "Pending"
+                      ? "blue"
+                      : appointment.status === "Confirmed"
+                      ? "secondary"
+                      : "destructive"
+                  }
+                >
+                  {appointment.status}
+                </Badge>
               </div>
               {/* button */}
               <div className="flex  gap-2 w-full">
-                <Button
-                  variant={"secondary"}
-                  className="bg-red-100 text-red-700 hover:bg-red-300 w-full"
-                >
+                <Button variant={"destructive"} className="w-full text-red-600">
                   Reject
                 </Button>
-                <Button
-                  variant="secondary"
-                  className=" bg-green-100 text-green-700 hover:bg-green-300 w-full"
-                >
+                <Button variant="secondary" className="w-full text-green-600">
                   Accept
                 </Button>
               </div>
