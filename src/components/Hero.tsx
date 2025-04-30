@@ -66,12 +66,14 @@ function Hero() {
               Get Started
             </Button>
           </Link>
-          <Button
-            variant="outline"
-            className=" hover:bg-[#96bae3] hover:text-[#1e1e2f]  transition-all duration-300 hover:scale-105"
-          >
-            Learn More
-          </Button>
+          <Link href="/resources">
+            <Button
+              variant="outline"
+              className=" hover:bg-[#96bae3] hover:text-[#1e1e2f]  transition-all duration-300 hover:scale-105"
+            >
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
 
