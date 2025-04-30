@@ -67,7 +67,8 @@ const patients: Patient[] = [
 
 export default function PatientOverview() {
   return (
-    <div className="flex flex-col gap-4 h-full overflow-auto p-4">
+    <div className="flex flex-col gap-4 h-full overflow-auto p-4 border shadow rounded-md bg-white/5">
+      {/* Header */}
       <div className="flex justify-between items-center ">
         <h1 className="font-bold text-lg">Patient Overview</h1>
         <div className="flex gap-2">

@@ -95,33 +95,28 @@ const overviewData: OverviewProps[] = [
 
 export default function Overview() {
   return (
-    <>
-      <div>
-        <h1 className="font-bold text-lg px-3">Overview</h1>
-      </div>
-      <div className="flex flex-row flex-wrap justify-between w-full gap-4 p-2 rounded-lg   h-full  overflow-y-auto">
-        {overviewData.map((index) => (
-          <div
-            key={index.id}
-            className="flex justify-between w-[340px] items-start p-4 rounded-lg  border gap-1 hover:bg-white/10 cursor-pointer transition-all duration-200 ease-in-out"
-          >
-            <div className="mt-1.5">{index.icon}</div>
+    <div className="flex flex-row flex-wrap justify-between w-full gap-4 p-2 rounded-lg   h-full  overflow-y-auto border shadow">
+      {overviewData.map((index) => (
+        <div
+          key={index.id}
+          className="flex justify-between w-[340px] items-start p-4 rounded-lg  border gap-1 hover:bg-white/10 cursor-pointer transition-all duration-200 ease-in-out"
+        >
+          <div className="mt-1.5">{index.icon}</div>
 
-            <div className="flex flex-col justify-between w-full">
-              <div className="p-1">
-                <h2 className="text-sm font-medium">{index.title}</h2>
-              </div>
-              <div className="flex justify-between  items-center p-1">
-                <span className="text-md font-bold">{index.number}k</span>
-                <div className="flex text-[12px] text-gray-500 gap-2">
-                  <span>{index.time}</span>
-                  <span>{index.percentage}%</span>
-                </div>
+          <div className="flex flex-col justify-between w-full">
+            <div className="p-1">
+              <h2 className="text-sm font-medium">{index.title}</h2>
+            </div>
+            <div className="flex justify-between  items-center p-1">
+              <span className="text-md font-bold">{index.number}k</span>
+              <div className="flex text-[12px] text-gray-500 gap-2">
+                <span>{index.time}</span>
+                <span>{index.percentage}%</span>
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </>
+        </div>
+      ))}
+    </div>
   );
 }

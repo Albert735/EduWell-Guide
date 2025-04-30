@@ -51,7 +51,7 @@ const appointmentData: AppointRequestProps[] = [
 
 export default function AppointRequest() {
   return (
-    <div className="flex flex-col gap-1 rounded-md shadow-sm ">
+    <div className="flex flex-col gap-1 rounded-md border shadow p-2 bg-white/5 h-full overflow-auto">
       {/* Header */}
       <div className="flex justify-between items-center  ">
         <h1 className=" font-medium">Appointment Requests</h1>
