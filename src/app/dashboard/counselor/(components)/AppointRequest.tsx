@@ -92,7 +92,7 @@ export default function AppointRequest() {
               <div className="flex  gap-2 w-full">
                 <Button
                   variant={"destructive"}
-                  className="w-full text-red-600 dark:bg-red-200"
+                  className="w-full "
                 >
                   Reject
                 </Button>
