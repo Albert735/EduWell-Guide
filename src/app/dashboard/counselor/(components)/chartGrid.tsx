@@ -30,7 +30,7 @@ const chartData = [
 
 export default function ChartGrid() {
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full">
       <CardHeader>
         <CardTitle>Academic Sessions</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
