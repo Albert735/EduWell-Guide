@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 interface AppointRequestProps {
   name: string;
@@ -90,15 +90,15 @@ export default function AppointRequest() {
               </div>
               {/* button */}
               <div className="flex  gap-2 w-full">
-                <Button
-                  variant={"destructive"}
-                  className="w-full "
+                <button
+                  // variant={"destructive"}
+                  className="w-full  bg-red-100 dark:bg-red-900 dark:text-red-100 text-red-600 hover:bg-red-200 rounded-md"
                 >
                   Reject
-                </Button>
-                <Button variant="secondary" className="w-full text-green-600">
+                </button>
+                <button className="w-full bg-green-100 dark:bg-green-900 dark:text-green-100 text-green-600 hover:bg-green-200 rounded-md p-1">
                   Accept
-                </Button>
+                </button>
               </div>
             </div>
           </div>
